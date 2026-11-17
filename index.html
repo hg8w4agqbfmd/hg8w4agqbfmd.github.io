@@ -1,0 +1,860 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>51每日爆料比赛-赛程爆料与结果核对</title>
+<meta name="description" content="51每日爆料比赛聚焦每日赛事爆料与结果核对，梳理赛程时间、阵容变动、比分复盘和争议回应。每场比赛标注信息来源、发布时间与可核对细节，帮助读者分清传闻、官方通报与赛后数据。">
+<meta name="keywords" content="51每日爆料比赛">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23134e4a'/%3E%3Cpath d='M18 42 L30 18 L36 32 L46 22' stroke='%23f2b544' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='46' cy='44' r='5' fill='%23f2b544'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"51每日爆料比赛","inLanguage":"zh-CN","description":"每日赛事爆料与结果核对信息站"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"赛前爆料里的首发名单什么时候最可信？","acceptedAnswer":{"@type":"Answer","text":"开赛前60分钟内由球队官方账号或联赛报名系统公布的名单可信度最高。赛前六小时以上的阵容消息多来自跟队记者或训练观察，常有位置调整。"}},
+{"@type":"Question","name":"比分爆料与官方技术统计不一致怎么处理？","acceptedAnswer":{"@type":"Answer","text":"以联赛官方技术统计页为准，争议集中在补时进球归属、乌龙球判定和助攻认定三类，核对时看裁判报告出具时间。"}},
+{"@type":"Question","name":"爆料截图能直接当作证据吗？","acceptedAnswer":{"@type":"Answer","text":"截图只能定位话题起点。要确认内容，需要找到发布账号的原始动态、发布时间和上下文，缺一项就降级为传闻。"}},
+{"@type":"Question","name":"怎么判断一条比赛爆料是赛前放风还是事后复盘？","acceptedAnswer":{"@type":"Answer","text":"看发布时间与开球时间的关系：开球前的属于预判类，开球后两小时内多为临场信息，超过24小时的多带复盘性质。"}},
+{"@type":"Question","name":"青年队比赛爆料为什么容易出错？","acceptedAnswer":{"@type":"Answer","text":"青年队名单变动频繁，临时上调一线队或伤停替换常在赛前两小时发生，公开渠道更新滞后。"}}
+]}
+</script>
+<style>
+:root{
+--ink:#15201f;
+--ink-2:#3d4d4b;
+--ink-3:#687977;
+--paper:#f7f5ef;
+--card:#ffffff;
+--brand:#134e4a;
+--brand-2:#1d6b62;
+--accent:#f2b544;
+--accent-2:#c8472f;
+--line:#dfdbd0;
+--line-2:#ece8de;
+--radius:14px;
+--radius-sm:8px;
+--shadow:0 2px 10px rgba(21,32,31,.06);
+--shadow-lg:0 10px 30px rgba(21,32,31,.10);
+--sp:clamp(14px,1.6vw,22px);
+--font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:120px}
+body{margin:0;font-family:var(--font);color:var(--ink);background:var(--paper);line-height:1.75;font-size:16px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{line-height:1.35;margin:0 0 .5em}
+h2{font-size:clamp(20px,2.4vw,26px);letter-spacing:.01em}
+h3{font-size:clamp(16px,1.7vw,19px)}
+p{margin:0 0 1em}
+ul,ol{margin:0 0 1em;padding-left:1.2em}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--brand);color:#fff;padding:10px 16px;z-index:99}
+.skip:focus{left:8px;top:8px}
+
+/* 吸顶公告 + 页头 */
+.stickwrap{position:sticky;top:0;z-index:50}
+.announce{background:var(--brand);color:#eaf3f0;font-size:13.5px}
+.announce .wrap{display:flex;align-items:center;gap:10px;padding:7px 0;flex-wrap:wrap}
+.announce b{color:var(--accent);font-weight:600}
+.announce .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none}
+.announce a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+header.site{background:rgba(247,245,239,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.head-in{display:flex;align-items:center;gap:18px;padding:12px 0}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand svg{width:40px;height:40px;flex:none}
+.brand-text b{display:block;font-size:17px;letter-spacing:.02em;color:var(--brand)}
+.brand-text span{display:block;font-size:11.5px;color:var(--ink-3);letter-spacing:.08em}
+nav.main{margin-left:auto}
+nav.main ul{display:flex;gap:2px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav.main a{display:block;padding:8px 11px;font-size:14.5px;color:var(--ink-2);border-radius:var(--radius-sm)}
+nav.main a:hover{background:var(--line-2);color:var(--brand);text-decoration:none}
+.head-tools{display:flex;gap:8px;align-items:center;flex:none}
+.search{position:relative}
+.search input{width:180px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:#fff;font:inherit;font-size:14px}
+.search input:focus{border-color:var(--brand-2)}
+#searchMsg{position:absolute;top:calc(100% + 8px);right:0;width:260px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);box-shadow:var(--shadow-lg);padding:8px 12px;font-size:13px;color:var(--ink-2);display:none}
+.menu-btn{display:none;background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:8px 12px;font:inherit;font-size:14px;cursor:pointer;color:var(--ink)}
+.menu-btn:hover{border-color:var(--brand-2);color:var(--brand)}
+
+/* 首屏 */
+.hero{position:relative;overflow:hidden;background:
+radial-gradient(1100px 420px at 85% -10%,rgba(242,181,68,.18),transparent 60%),
+linear-gradient(180deg,#f2efe6,#f7f5ef)}
+.hero-in{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(18px,3vw,44px);align-items:center;padding:clamp(30px,5vw,64px) 0 clamp(34px,5vw,60px)}
+.hero-kicker{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 13px;font-size:13px;color:var(--brand);margin-bottom:16px}
+.hero-kicker i{width:7px;height:7px;border-radius:50%;background:var(--accent-2);display:inline-block}
+.hero h1{font-size:clamp(30px,4.6vw,52px);letter-spacing:.02em;color:var(--brand);margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--accent-2)}
+.hero p.lead{font-size:clamp(15px,1.5vw,17px);color:var(--ink-2);max-width:36em}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;font-size:15px;font-weight:600;border:1px solid transparent;transition:transform .18s ease,box-shadow .18s ease}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:var(--shadow)}
+.btn-ghost{background:#fff;color:var(--brand);border-color:var(--line)}
+.hero-stats{display:flex;gap:clamp(14px,3vw,32px);margin-top:26px;flex-wrap:wrap}
+.hero-stats div{border-left:3px solid var(--accent);padding-left:12px}
+.hero-stats b{display:block;font-size:clamp(19px,2.2vw,24px);color:var(--brand);line-height:1.2}
+.hero-stats span{font-size:13px;color:var(--ink-3)}
+.hero-art{position:relative;min-height:300px}
+.hero-art svg{width:100%;height:auto;display:block}
+.hero-art .cap{position:absolute;right:6px;bottom:2px;font-size:11.5px;color:var(--ink-3);background:rgba(247,245,239,.9);padding:2px 8px;border-radius:6px}
+
+/* 主体布局 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:clamp(20px,3vw,40px);padding:clamp(26px,4vw,50px) 0}
+main{min-width:0}
+section.block{margin-bottom:clamp(30px,4vw,54px);scroll-margin-top:120px}
+.sec-head{display:flex;align-items:baseline;gap:12px;border-bottom:2px solid var(--brand);padding-bottom:8px;margin-bottom:20px;flex-wrap:wrap}
+.sec-head h2{margin:0;color:var(--brand)}
+.sec-head .tag{font-size:12.5px;color:var(--ink-3);margin-left:auto}
+.sec-head p{margin:0;font-size:13.5px;color:var(--ink-3);width:100%}
+
+/* 领域概览：对照面板 */
+.panels{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 16px 14px;box-shadow:var(--shadow)}
+.panel h3{font-size:15.5px;color:var(--brand);margin-bottom:6px}
+.panel p{font-size:13.8px;color:var(--ink-2);margin:0}
+.panel .k{font-size:12px;color:var(--accent-2);font-weight:600;letter-spacing:.04em}
+
+/* 精选卡片 */
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.card img{width:100%;height:150px;object-fit:cover}
+.card .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{font-size:16px;margin:0}
+.card p{font-size:13.6px;color:var(--ink-2);margin:0;flex:1}
+.meta{font-size:12px;color:var(--ink-3);display:flex;gap:10px;flex-wrap:wrap}
+.badge{display:inline-block;font-size:12px;padding:1px 8px;border-radius:999px;background:#e7f0ed;color:var(--brand);border:1px solid #cfe1dc}
+.badge.warn{background:#fbece7;color:#a8391f;border-color:#f2d3c8}
+.badge.gold{background:#fdf3dd;color:#8a5c00;border-color:#f0e0b6}
+
+/* 最新更新 紧凑列表 */
+.updates{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.updates li{list-style:none;display:grid;grid-template-columns:78px 1fr auto;gap:14px;padding:13px 16px;border-bottom:1px solid var(--line-2);align-items:baseline}
+.updates ul{margin:0;padding:0}
+.updates li:last-child{border-bottom:0}
+.updates time{font-size:12.5px;color:var(--accent-2);font-weight:600;white-space:nowrap}
+.updates .t{font-size:14.5px}
+.updates .s{font-size:12.5px;color:var(--ink-3);white-space:nowrap}
+
+/* 分类入口 标签索引 */
+.tagcloud{display:flex;flex-wrap:wrap;gap:10px}
+.tagcloud a{display:inline-block;padding:8px 14px;background:#fff;border:1px solid var(--line);border-radius:999px;font-size:14px;color:var(--ink-2)}
+.tagcloud a:hover{border-color:var(--brand-2);color:var(--brand);text-decoration:none}
+.tagcloud a b{color:var(--accent-2);font-size:12px;margin-left:4px;font-weight:600}
+
+/* 深度解析 分栏正文 */
+.analysis{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(18px,3vw,32px);box-shadow:var(--shadow)}
+.analysis .lede{font-size:15.5px;color:var(--ink-2);border-left:3px solid var(--accent);padding-left:14px}
+.analysis h3{margin-top:1.6em;color:var(--brand)}
+.analysis h3:first-of-type{margin-top:.6em}
+.two-col{columns:2;column-gap:clamp(20px,3vw,40px)}
+.two-col p{margin-bottom:.9em}
+.claim{background:#fdf8ec;border:1px solid #f0e2bf;border-radius:var(--radius-sm);padding:12px 16px;margin:14px 0;font-size:14.4px}
+.claim b{color:#8a5c00}
+.timeline-line{list-style:none;padding:0;margin:14px 0 0;border-left:2px solid var(--line)}
+.timeline-line li{position:relative;padding:0 0 14px 20px;font-size:14.2px;color:var(--ink-2)}
+.timeline-line li::before{content:"";position:absolute;left:-6px;top:8px;width:10px;height:10px;border-radius:50%;background:var(--accent);border:2px solid var(--card)}
+.timeline-line time{font-weight:600;color:var(--brand);margin-right:8px}
+table.cmp{width:100%;border-collapse:collapse;font-size:14px;margin:12px 0 4px}
+table.cmp caption{caption-side:top;text-align:left;font-size:12.5px;color:var(--ink-3);padding-bottom:6px}
+table.cmp th,table.cmp td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+table.cmp th{background:#f0eee6;font-weight:600;color:var(--brand)}
+
+/* 体验指南 编号步骤 */
+.steps{counter-reset:step;display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.steps li{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px 14px 60px;font-size:14.2px;color:var(--ink-2)}
+.steps li::before{counter-increment:step;content:counter(step);position:absolute;left:16px;top:14px;width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700}
+.steps b{color:var(--ink);display:block;font-size:15px}
+
+/* FAQ */
+details{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-sm);padding:0;margin-bottom:10px;overflow:hidden}
+details[open]{border-color:#cfe1dc}
+summary{cursor:pointer;padding:13px 44px 13px 16px;font-size:15px;font-weight:600;color:var(--ink);position:relative;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:16px;top:10px;font-size:20px;color:var(--brand-2);font-weight:400}
+details[open] summary::after{content:"–"}
+details .ans{padding:0 16px 15px;font-size:14.2px;color:var(--ink-2)}
+details .ans p{margin:0}
+
+/* 评论 */
+.comments{display:grid;gap:12px}
+.comment{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:13px 16px}
+.comment .who{display:flex;gap:10px;align-items:baseline;font-size:13px;color:var(--ink-3);margin-bottom:4px}
+.comment .who b{color:var(--brand);font-size:13.5px}
+.comment p{font-size:14.2px;color:var(--ink-2);margin:0}
+
+/* 资讯 */
+.news{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.news article{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px}
+.news h3{font-size:15px;margin-bottom:6px}
+.news p{font-size:13.6px;color:var(--ink-2);margin:0 0 6px}
+
+/* 相关推荐 */
+.reco{display:flex;flex-wrap:wrap;gap:10px}
+.reco a{padding:7px 13px;background:#fff;border:1px dashed var(--line);border-radius:var(--radius-sm);font-size:13.5px;color:var(--ink-2)}
+.reco a:hover{border-style:solid;border-color:var(--brand-2);color:var(--brand);text-decoration:none}
+
+/* 榜单 */
+.rank{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.rank ol{list-style:none;margin:0;padding:0;counter-reset:rk}
+.rank li{counter-increment:rk;display:grid;grid-template-columns:34px 1fr auto;gap:12px;padding:12px 16px;border-bottom:1px solid var(--line-2);align-items:center;font-size:14.2px}
+.rank li:last-child{border-bottom:0}
+.rank li::before{content:counter(rk);font-weight:700;color:var(--brand);background:#e7f0ed;border-radius:6px;text-align:center;line-height:26px;height:26px;font-size:13px}
+.rank .val{font-size:12.5px;color:var(--ink-3);white-space:nowrap}
+
+/* 侧栏 */
+aside{min-width:0}
+aside section{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px;margin-bottom:18px;box-shadow:var(--shadow)}
+aside h2{font-size:15.5px;color:var(--brand);border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:12px}
+aside nav ul{list-style:none;margin:0;padding:0}
+aside nav a{display:block;padding:6px 10px;font-size:13.8px;color:var(--ink-2);border-left:2px solid transparent;border-radius:0 6px 6px 0}
+aside nav a:hover{background:var(--line-2);color:var(--brand);text-decoration:none}
+aside nav a.active{border-left-color:var(--accent);background:#f4f1e8;color:var(--brand);font-weight:600}
+.side-list{list-style:none;margin:0;padding:0;font-size:13.6px}
+.side-list li{padding:7px 0;border-bottom:1px dashed var(--line-2);color:var(--ink-2)}
+.side-list li:last-child{border-bottom:0}
+.side-list time{color:var(--accent-2);font-size:12.5px;margin-right:6px}
+
+/* 页脚 */
+footer.site{background:#102a27;color:#c9d8d4;margin-top:20px}
+.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:24px;padding:clamp(28px,4vw,48px) 0 24px}
+footer h2{font-size:15px;color:#fff;margin-bottom:10px}
+footer a{color:#c9d8d4}
+footer a:hover{color:var(--accent)}
+.foot-brand{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px}
+.foot-brand svg{width:36px;height:36px;flex:none}
+.foot-brand b{color:#fff;font-size:16px;letter-spacing:.02em}
+.foot-brand p{font-size:13.4px;margin:4px 0 0;color:#a7bab6}
+.foot-note{font-size:12.6px;color:#8fa4a0;line-height:1.7}
+footer ul{list-style:none;margin:0;padding:0;font-size:13.6px}
+footer ul li{padding:4px 0}
+.foot-bottom{border-top:1px solid #24403c;padding:14px 0 26px;font-size:12.6px;color:#8fa4a0;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+/* 回到顶部 */
+#toTop{position:fixed;right:18px;bottom:22px;width:44px;height:44px;border-radius:50%;border:0;background:var(--brand);color:#fff;font-size:19px;cursor:pointer;box-shadow:var(--shadow-lg);opacity:0;visibility:hidden;transform:translateY(8px);transition:.22s}
+#toTop.show{opacity:1;visibility:visible;transform:translateY(0)}
+#toTop:hover{background:var(--brand-2)}
+
+/* 响应式 */
+@media (max-width:980px){
+.layout{grid-template-columns:1fr}
+aside{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+aside section{margin-bottom:0}
+.hero-in{grid-template-columns:1fr}
+.hero-art{min-height:0;order:-1}
+.panels{grid-template-columns:repeat(2,1fr)}
+nav.main ul{flex-wrap:wrap}
+.search input{width:140px}
+.foot-top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+.menu-btn{display:inline-block}
+nav.main{position:absolute;left:0;right:0;top:100%;background:var(--paper);border-bottom:1px solid var(--line);display:none;padding:8px 16px 14px;box-shadow:var(--shadow-lg)}
+nav.main.open{display:block}
+nav.main ul{flex-direction:column;gap:0}
+nav.main a{padding:10px 8px;border-bottom:1px solid var(--line-2)}
+.head-in{flex-wrap:wrap;gap:10px}
+.head-tools{margin-left:auto}
+.search input{width:150px}
+.cards,.news{grid-template-columns:1fr}
+.panels{grid-template-columns:1fr}
+.two-col{columns:1}
+.updates li{grid-template-columns:70px 1fr}
+.updates .s{display:none}
+aside{grid-template-columns:1fr}
+}
+@media (max-width:420px){
+.wrap{width:calc(100% - 24px)}
+.hero h1{font-size:clamp(26px,8vw,34px)}
+.brand-text span{display:none}
+.search input{width:132px}
+}
+@media (prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*{transition:none!important;animation:none!important}
+.btn:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主内容</a>
+
+<div class="stickwrap">
+  <div class="announce">
+    <div class="wrap">
+      <span class="dot" aria-hidden="true"></span>
+      <span><b>11月8日 08:12</b> 更新：城东德比首发名单官方确认，赛前流传的“门将轮换”说法不成立</span>
+      <a href="#updates">查看全部更新</a>
+    </div>
+  </div>
+  <header class="site">
+    <div class="wrap head-in">
+      <a class="brand" href="/#top" aria-label="51每日爆料比赛 首页">
+        <svg viewBox="0 0 64 64" role="img" aria-label="赛事信号波形标志">
+          <rect width="64" height="64" rx="14" fill="#134e4a"/>
+          <path d="M15 40 L25 20 L33 34 L41 24 L50 42" stroke="#f2b544" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="50" cy="45" r="5" fill="#f2b544"/>
+        </svg>
+        <span class="brand-text">
+          <b>51每日爆料比赛</b>
+          <span>DAILY MATCH SIGNAL</span>
+        </span>
+      </a>
+      <nav class="main" id="mainNav" aria-label="主题导航">
+        <ul>
+          <li><a href="/#overview">赛事概览</a></li>
+          <li><a href="/#featured">精选爆料</a></li>
+          <li><a href="/#updates">最新更新</a></li>
+          <li><a href="/#channels">分类频道</a></li>
+          <li><a href="/#analysis">深度解析</a></li>
+          <li><a href="/#guide">核对指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#rank">爆料榜</a></li>
+        </ul>
+      </nav>
+      <div class="head-tools">
+        <div class="search">
+          <label for="q" class="skip">站内搜索</label>
+          <input id="q" type="search" placeholder="搜索比赛 / 球队 / 爆料" autocomplete="off">
+          <div id="searchMsg" role="status" aria-live="polite"></div>
+        </div>
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">菜单</button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<div class="hero" id="top">
+  <div class="wrap hero-in">
+    <div>
+      <span class="hero-kicker"><i aria-hidden="true"></i>11月8日赛程日 · 今日 9 场重点爆料已归档</span>
+      <h1>51每日爆料比赛</h1>
+      <p class="lead">把每天流传的赛前阵容、临场换人、补时判罚和赛后数据放进同一条时间线：谁在几时几分说了什么，官方通报与跟队消息差在哪里，比分和红黄牌能不能对上技术统计页。爆料不负责下结论，先给出去核对的路径。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/#updates">看今日更新 →</a>
+        <a class="btn btn-ghost" href="/#analysis">读深度解析</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>9 场</b><span>今日归档赛事</span></div>
+        <div><b>27 条</b><span>已核对爆料</span></div>
+        <div><b>6 条</b><span>待官方回应</span></div>
+        <div><b>3 起</b><span>说法冲突待查</span></div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 420 320" role="img" aria-label="赛事信号与比分时间线示意图">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#134e4a"/><stop offset="1" stop-color="#1d6b62"/>
+          </linearGradient>
+        </defs>
+        <rect x="8" y="24" width="404" height="272" rx="20" fill="url(#g1)" opacity=".08"/>
+        <rect x="34" y="48" width="352" height="70" rx="12" fill="#fff" stroke="#dfdbd0"/>
+        <text x="52" y="76" font-size="14" fill="#687977">城东德比 · 第 22 轮</text>
+        <text x="52" y="102" font-size="20" fill="#134e4a" font-weight="700">2 : 1</text>
+        <text x="150" y="102" font-size="13" fill="#3d4d4b">补时 90+4 进球</text>
+        <rect x="34" y="134" width="352" height="34" rx="8" fill="#fff" stroke="#dfdbd0"/>
+        <circle cx="52" cy="151" r="5" fill="#f2b544"/>
+        <text x="66" y="156" font-size="12.5" fill="#3d4d4b">19:35 官方首发公布</text>
+        <rect x="34" y="176" width="352" height="34" rx="8" fill="#fff" stroke="#dfdbd0"/>
+        <circle cx="52" cy="193" r="5" fill="#c8472f"/>
+        <text x="66" y="198" font-size="12.5" fill="#3d4d4b">20:58 门将伤退，替补登场</text>
+        <rect x="34" y="218" width="352" height="34" rx="8" fill="#fff" stroke="#dfdbd0"/>
+        <circle cx="52" cy="235" r="5" fill="#134e4a"/>
+        <text x="66" y="240" font-size="12.5" fill="#3d4d4b">22:06 技术统计出具</text>
+        <path d="M360 60 L376 88 L360 116" stroke="#f2b544" stroke-width="3" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span class="cap">示意图 · 单场比赛爆料时间轴</span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap layout" id="main">
+  <main>
+
+    <section class="block" id="overview">
+      <div class="sec-head">
+        <h2>今日赛事爆料概览</h2>
+        <span class="tag">11月8日 · 9 场</span>
+        <p>按信息类型分成三类：已由联赛或俱乐部确认的、有具体账号出处的待核信息、以及目前只有转述链条的说法。</p>
+      </div>
+      <div class="panels">
+        <div class="panel">
+          <span class="k">已确认</span>
+          <h3>城东德比首发与比分</h3>
+          <p>联赛官网 19:35 公布首发，21:47 出具比分 2:1。跟队记者早前称“二号门将顶替”，与官方名单不符，该说法已标注撤回。</p>
+        </div>
+        <div class="panel">
+          <span class="k">待核</span>
+          <h3>南岸联外援注册进度</h3>
+          <p>注册窗口 11月6日 17:00 关闭，俱乐部公告只写“材料已递交”，未给注册号。联赛报名系统尚未显示该球员，暂列待核。</p>
+        </div>
+        <div class="panel">
+          <span class="k">转述</span>
+          <h3>北区青年联赛改期</h3>
+          <p>一条转述称三场比赛挪至11月12日，原始出处为赛事组委会通知截图，未见官网同步。按“单源转述”处理，不作结论。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="featured">
+      <div class="sec-head">
+        <h2>精选爆料推荐</h2>
+        <span class="tag">编辑挑出 4 条</span>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <img src="https://picsum.photos/seed/match-brief-11/640/300" width="640" height="300" loading="lazy" alt="球场边线旁的战术板与记录本">
+          <div class="body">
+            <div class="meta"><span class="badge">赛前阵容</span><span>11月8日 18:20</span></div>
+            <h3>城东德比首发提前泄露？三条消息对不上</h3>
+            <p>17:40 一个本地账号发出名单截图，19:35 官方名单公布后有 2 个位置不同。差异集中在右后卫和前锋，改动发生在赛前热身之后。</p>
+            <a href="/#analysis">看逐条对照</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/referee-report-02/640/300" width="640" height="300" loading="lazy" alt="裁判报告与比赛记录文件">
+          <div class="body">
+            <div class="meta"><span class="badge gold">判罚争议</span><span>11月7日 22:10</span></div>
+            <h3>补时进球归属改了两次，规则依据是什么</h3>
+            <p>第一次记为前锋进球，第二次改为防守方乌龙。技术统计页 23:02 更新，裁判报告次日 09:40 出具，两者对射门方向描述一致。</p>
+            <a href="/#analysis">看归属判定</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/fixture-board-33/640/300" width="640" height="300" loading="lazy" alt="赛程表与报名系统界面示意">
+          <div class="body">
+            <div class="meta"><span class="badge warn">待官方回应</span><span>11月6日 17:05</span></div>
+            <h3>南岸联外援注册：材料已交，系统没名字</h3>
+            <p>俱乐部公告 16:48 发出，仅一句“材料已在窗口内递交”。联赛报名系统 17:05 仍未出现该球员信息，出场资格存疑。</p>
+            <a href="/#guide">看核对步骤</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/youth-league-14/640/300" width="640" height="300" loading="lazy" alt="青年联赛训练场与看台">
+          <div class="body">
+            <div class="meta"><span class="badge">改期信息</span><span>11月5日 11:30</span></div>
+            <h3>北区青年联赛三场挪期，只有一张通知截图</h3>
+            <p>截图落款为组委会，未带编号。三场原定11月9日至10日，改期说法指向11月12日。同组另一支球队教练口头否认收到通知。</p>
+            <a href="/#faq">看信息分级</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="block" id="updates">
+      <div class="sec-head">
+        <h2>最新更新</h2>
+        <span class="tag">按发布时间倒序</span>
+        <p>每条都标出发布时间和出处形态，方便对照原帖审阅。</p>
+      </div>
+      <div class="updates">
+        <ul>
+          <li><time>11月8日 21:47</time><span class="t">城东德比终场比分 2:1，官方技术统计页同步更新</span><span class="s">官网</span></li>
+          <li><time>11月8日 20:58</time><span class="t">城东德比主队门将伤退，第 63 分钟替补门将登场</span><span class="s">跟队记者</span></li>
+          <li><time>11月8日 19:35</time><span class="t">城东德比首发名单发布，右后卫位置与此前截图不同</span><span class="s">联赛公告</span></li>
+          <li><time>11月7日 23:02</time><span class="t">前一日补时进球改判为乌龙球，比分不变</span><span class="s">技术统计</span></li>
+          <li><time>11月7日 09:40</time><span class="t">裁判报告出具，写明补时第 4 分钟触球判定依据</span><span class="s">裁判委员会</span></li>
+          <li><time>11月6日 17:05</time><span class="t">南岸联外援未在联赛报名系统显示，注册状态待核</span><span class="s">报名系统</span></li>
+          <li><time>11月6日 16:48</time><span class="t">南岸联公告称注册材料已在窗口内递交</span><span class="s">俱乐部公告</span></li>
+          <li><time>11月5日 11:30</time><span class="t">北区青年联赛改期传闻出现，仅有通知截图</span><span class="s">单源转述</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="block" id="channels">
+      <div class="sec-head">
+        <h2>分类频道入口</h2>
+        <span class="tag">10 个频道</span>
+        <p>按比赛阶段和爆料形态切分，点进去只看该类型的信息。</p>
+      </div>
+      <div class="tagcloud">
+        <a href="/#featured">赛前首发名单爆料 <b>38</b></a>
+        <a href="/#featured">临场换人消息 <b>24</b></a>
+        <a href="/#analysis">补时判罚争议 <b>17</b></a>
+        <a href="/#featured">伤停与康复进度 <b>31</b></a>
+        <a href="/#guide">外援注册与出场资格 <b>9</b></a>
+        <a href="/#updates">赛程改期与场地调整 <b>12</b></a>
+        <a href="/#analysis">比分与技术统计差异 <b>15</b></a>
+        <a href="/#featured">青年队梯队动态 <b>21</b></a>
+        <a href="/#faq">裁判报告解读 <b>8</b></a>
+        <a href="/#rank">赛后发布会实录 <b>19</b></a>
+      </div>
+    </section>
+
+    <section class="block" id="analysis">
+      <div class="sec-head">
+        <h2>深度解析</h2>
+        <span class="tag">今日唯一主体阅读区</span>
+      </div>
+      <div class="analysis">
+        <p class="lede">核心判断先摆出来：赛前阵容爆料的准确率，与发布时间到开球时间的距离关系，比与发布账号粉丝数的关系更紧。用今天城东德比和本周三起同类事件做样本，越靠近开球，命中越高；越早发布的“独家首发”，改动越多。</p>
+
+        <h3>一、城东德比的首发名单：从 17:40 到 19:35 改了两个位置</h3>
+        <div class="two-col">
+          <p>一份标注“内部名单”的截图在 11月8日 17:40 出现，列出 11 人。19:35 联赛公告发出后逐位比对：右后卫由 A 换成 B，中锋由 C 换成 D，其余 9 人一致。两处改动的共同点是替换上来的球员都在赛前热身阶段被看到与主力组同侧。</p>
+          <p>时间差 1 小时 55 分。用这条样本算准确率是 9/11，但把本周另外两起同类事件并进来，命中会下降：11月6日一场比赛的早间爆料对了 7 人，11月4日一场对了 8 人，且都发生在开球前五小时以上。</p>
+          <p>比赛名单不是固定文档。赛前临时伤病、热身拉伤、护照与注册状态核验，都会在最后一小时改动。<b>发布时间离开球越久，名单的“留改空间”越大</b>，这不是账号诚信问题，是流程决定的。</p>
+        </div>
+
+        <div class="claim">
+          <b>可反驳的具体判断：</b>在 11月4日至11月8日的 12 条首发爆料样本里，开球前 90 分钟内发布的 6 条，平均命中 10.3 人；开球前 5 小时以上发布的 6 条，平均命中 8.1 人。若补充更多样本后两组差距收窄到 1 人以内，这条判断就该修改。
+        </div>
+
+        <h3>二、补时进球改判：同一次触球，三种说法的时间线</h3>
+        <ul class="timeline-line">
+          <li><time>11月7日 21:52</time>现场直播字幕记为“前锋 90+4 进球”，看台大屏同步。</li>
+          <li><time>11月7日 22:10</time>跟队记者发帖称“疑似防守球员最后触球”，附带一段 8 秒侧向机位视频。</li>
+          <li><time>11月7日 23:02</time>官方技术统计页把进球者改为防守球员，标注乌龙，比分不变。</li>
+          <li><time>11月8日 09:40</time>裁判报告出具，写明球在门线前改变方向，判定依据为门线侧机位。</li>
+        </ul>
+        <table class="cmp">
+          <caption>三种信息来源对同一次触球的表述对照</caption>
+          <thead><tr><th>来源</th><th>表述</th><th>出具时间</th><th>可核对点</th></tr></thead>
+          <tbody>
+            <tr><td>直播字幕</td><td>前锋进球</td><td>21:52</td><td>现场播报系统记录</td></tr>
+            <tr><td>跟队记者帖</td><td>疑似防守球员触球</td><td>22:10</td><td>8 秒侧向视频</td></tr>
+            <tr><td>技术统计页</td><td>乌龙球</td><td>23:02</td><td>版本更新记录</td></tr>
+            <tr><td>裁判报告</td><td>门线前改变方向</td><td>次日 09:40</td><td>门线侧机位判定</td></tr>
+          </tbody>
+        </table>
+        <p>四份材料里，直播字幕属于实时产物，改判后不会回改历史记录；技术统计页有版本时间可追；裁判报告是唯一带判定依据文字的。争议不在“谁进球”，而在这球算不算射门数据，这会影响射手榜和球队进攻统计。</p>
+
+        <h3>三、外援注册：公告措辞与系统状态的错位</h3>
+        <div class="two-col">
+          <p>南岸联 11月6日 16:48 的公告只有一句“注册材料已在窗口内递交”，没写注册号、受理状态或是否获准。17:05 联赛报名系统里查不到该球员。两句表述都能成立：递交是动作，注册是结果。</p>
+          <p>窗口 17:00 关闭，递交时间卡在截止前 12 分钟。按联赛规程，材料齐全才进入审核，审核期不计入窗口。也就是说，公告与系统状态并不必然矛盾，真正缺的是受理回执编号。</p>
+          <p>同类情形在 10月下旬出现过一次：另一家俱乐部的公告同样只写“已递交”，两天后系统才显示注册完成。那次的时间差是 46 小时。这条对照能说明流程长度，不能直接证明南岸联这次也会通过。</p>
+        </div>
+
+        <h3>四、青年联赛改期：单源转述为什么不能当结论</h3>
+        <p>11月5日 11:30 出现的通知截图，落款为北区赛事组委会，无编号、无盖章、无官网链接。三场改期指向 11月12日。同组一支球队的教练在当日 15:20 的采访里说“没收到正式通知”。一边是截图，一边是当事方口径，两个信息层不能合并成“已改期”或“未改期”。</p>
+        <p>可核对的做法只有两个：查组委会官网的赛程页版本记录，或等参赛队收到带编号的书面通知。在此之前，把这条标为“单源转述”比标“真”或“假”都更准确。</p>
+      </div>
+    </section>
+
+    <section class="block" id="guide">
+      <div class="sec-head">
+        <h2>爆料核对体验指南</h2>
+        <span class="tag">五步走</span>
+      </div>
+      <ol class="steps">
+        <li><b>先看发布时间与开球时间的关系</b>开球前 90 分钟内的阵容信息与开球前 6 小时以上的信息，可信度不在一个层级，先分成两堆再读内容。</li>
+        <li><b>找原始账号，不看转发截图</b>截图会裁掉上下文。找到发布账号的原始动态，确认发布时间、是否有后续修改或删除说明。</li>
+        <li><b>用官方报名系统交叉验证球员身份</b>注册号、所属俱乐部、出场资格三项在系统里能查。系统没有记录时，俱乐部的“已递交”只能算过程信息。</li>
+        <li><b>比分与红黄牌对技术统计页</b>技术统计页带版本更新时间。补时进球、乌龙、助攻认定是最常改的三类，改判后看裁判报告是否同步。</li>
+        <li><b>把结论标成四档</b>已确认、待核、单源转述、已撤回。四档的措辞不同，阅读时不要把它们混成同一句判断。</li>
+      </ol>
+    </section>
+
+    <section class="block" id="faq">
+      <div class="sec-head">
+        <h2>常见问题</h2>
+        <span class="tag">5 问</span>
+      </div>
+      <details>
+        <summary>赛前爆料里的首发名单，什么时间点之后最可信？</summary>
+        <div class="ans"><p>开赛前 60 分钟内由球队官方账号或联赛报名系统公布的名单可信度最高。以 11月8日城东德比为例，19:35 官方名单与 17:40 流传截图的差异有 2 人，而赛前热身阶段被看到与主力组同侧的球员，正好替代了那 2 人。</p></div>
+      </details>
+      <details>
+        <summary>比分爆料与官方技术统计不一致时，以哪个为准？</summary>
+        <div class="ans"><p>以联赛官方技术统计页为准，改判记录通常附版本时间。争议集中在补时进球归属、乌龙球判定和助攻认定三类，11月7日那场球的归属就改了两次，最终依据是次日 09:40 的裁判报告。</p></div>
+      </details>
+      <details>
+        <summary>爆料截图能不能直接当作证据？</summary>
+        <div class="ans"><p>截图只能定位话题起点。要确认内容，需要原始账号动态、发布时间、上下文，三项缺一就降级为单源转述。11月5日北区青年联赛改期截图没有编号和官网链接，就属于这一类。</p></div>
+      </details>
+      <details>
+        <summary>怎么区分赛前放风和赛后复盘？</summary>
+        <div class="ans"><p>看发布时间与开球时间的关系：开球前的多属预判，开球后两小时内多为临场信息，超过 24 小时的多带复盘性质。南岸联外援注册公告发于窗口关闭前 12 分钟，属赛前流程信息，不是复盘。</p></div>
+      </details>
+      <details>
+        <summary>青年队比赛爆料为什么容易出错？</summary>
+        <div class="ans"><p>青年队名单变动频繁，临时上调一线队或伤停替换常在赛前两小时发生，公开渠道更新滞后。11月5日那张改期截图之后，同组球队教练到 15:20 仍称未收到正式通知。</p></div>
+      </details>
+    </section>
+
+    <section class="block" id="comments">
+      <div class="sec-head">
+        <h2>读者评论</h2>
+        <span class="tag">节选</span>
+      </div>
+      <div class="comments">
+        <div class="comment">
+          <div class="who"><b>看台第七排</b><span>11月8日 22:14</span><span class="badge gold">针对城东德比</span></div>
+          <p>右后卫换人那条我信了，因为 17:40 的截图里 A 的名字拼错了。官方名单里 B 是替补席上第一个被叫去热身的，细节对得上。</p>
+        </div>
+        <div class="comment">
+          <div class="who"><b>记录本小周</b><span>11月8日 09:52</span><span class="badge">针对判罚改判</span></div>
+          <p>乌龙改判不影响比分，但射手榜少一球，这个差别在赛季末评奖时会被翻出来。技术统计页的版本记录最好公开存一份。</p>
+        </div>
+        <div class="comment">
+          <div class="who"><b>路过球场</b><span>11月7日 23:30</span></div>
+          <p>有些账号把赛前猜测写得像内部消息，开球后删帖。截图留痕比删帖速度快，这点还行。</p>
+        </div>
+        <div class="comment">
+          <div class="who"><b>南岸看客</b><span>11月6日 18:02</span><span class="badge warn">针对外援注册</span></div>
+          <p>“材料已递交”这四个字太滑了。到底受理没受理，公告里加一个受理编号不难吧。窗口 17:00 关，16:48 发这条，时间很微妙。</p>
+        </div>
+        <div class="comment">
+          <div class="who"><b>北区教练组家属</b><span>11月5日 15:40</span><span class="badge">针对改期传闻</span></div>
+          <p>那张截图我在群里也看到了，没有编号。当天下午球队还在按 11月9日 准备训练，真改期不可能这么通知。</p>
+        </div>
+        <div class="comment">
+          <div class="who"><b>数据表控</b><span>11月8日 20:05</span></div>
+          <p>把四档标注法做进每条更新里挺实用的。比起一句“据说”，我更愿意看“待核”两个字挂着。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="news">
+      <div class="sec-head">
+        <h2>相关资讯</h2>
+        <span class="tag">4 条</span>
+      </div>
+      <div class="news">
+        <article>
+          <div class="meta"><span>11月8日 16:10</span><span class="badge">赛程</span></div>
+          <h3>第 22 轮剩余三场开球时间确认</h3>
+          <p>两场改到 19:35，一场保持 20:00。场地检查报告由主队提交，联赛官网赛程页已同步。</p>
+        </article>
+        <article>
+          <div class="meta"><span>11月7日 14:20</span><span class="badge">伤病</span></div>
+          <h3>城东德比主队门将肌肉不适，赛前单独训练</h3>
+          <p>训练开放 15 分钟，门将未参与扑救练习。赛前 19:35 名单显示其首发，与伤停传闻不符。</p>
+        </article>
+        <article>
+          <div class="meta"><span>11月6日 10:05</span><span class="badge gold">规则</span></div>
+          <h3>注册窗口关闭后的补审流程说明</h3>
+          <p>规程写明材料齐全方可进入审核，审核期不计入窗口。受理编号是判断是否进入流程的唯一凭据。</p>
+        </article>
+        <article>
+          <div class="meta"><span>11月4日 21:15</span><span class="badge">发布会</span></div>
+          <h3>赛后发布会实录：换人时机被追问</h3>
+          <p>第 63 分钟门将伤退是被动换人，第 78 分钟的前锋调整属战术选择。教练称两次换人计划不同。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="block" id="rank">
+      <div class="sec-head">
+        <h2>本周爆料命中榜</h2>
+        <span class="tag">11月3日–11月8日</span>
+        <p>按“发布内容与官方最终信息一致项数 ÷ 发布项数”计算，样本不足 5 项的账号不列入。</p>
+      </div>
+      <div class="rank">
+        <ol>
+          <li><span><b>跟队记者 · 老曹</b>：城东德比、南岸联两场合计 18 项，迟到替换 2 项</span><span class="val">89%</span></li>
+          <li><span><b>技术统计观察室</b>：补时进球归属改判全程跟进，4 条里 4 条与裁判报告一致</span><span class="val">100%</span></li>
+          <li><span><b>北区赛事快报</b>：含 1 条未获官网确认的改期信息，按转述计入</span><span class="val">72%</span></li>
+          <li><span><b>青年队梯队笔记</b>：名单类 11 项，位置改动 3 项</span><span class="val">73%</span></li>
+          <li><span><b>看台传声筒</b>：4 条赛前阵容里 2 条赛后被删帖，按未命中计</span><span class="val">50%</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="block" id="reco">
+      <div class="sec-head">
+        <h2>相关推荐</h2>
+      </div>
+      <div class="reco">
+        <a href="/#featured">赛前首发名单爆料怎么读</a>
+        <a href="/#analysis">补时进球改判规则对照</a>
+        <a href="/#guide">外援注册编号查法</a>
+        <a href="/#faq">青年联赛改期通知识别</a>
+        <a href="/#updates">城东德比完整时间线</a>
+        <a href="/#comments">赛后发布会追问实录</a>
+        <a href="/#rank">爆料命中率怎么算</a>
+        <a href="/#news">裁判报告出具流程</a>
+      </div>
+    </section>
+
+  </main>
+
+  <aside aria-label="侧栏导航与简讯">
+    <section>
+      <h2>页内导航</h2>
+      <nav id="sideNav" aria-label="侧栏页内导航">
+        <ul>
+          <li><a href="/#overview">今日赛事爆料概览</a></li>
+          <li><a href="/#featured">精选爆料推荐</a></li>
+          <li><a href="/#updates">最新更新</a></li>
+          <li><a href="/#channels">分类频道入口</a></li>
+          <li><a href="/#analysis">深度解析</a></li>
+          <li><a href="/#guide">爆料核对体验指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#comments">读者评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#rank">本周爆料命中榜</a></li>
+          <li><a href="/#reco">相关推荐</a></li>
+        </ul>
+      </nav>
+    </section>
+    <section>
+      <h2>今日待核清单</h2>
+      <ul class="side-list">
+        <li><time>11月8日</time>城东德比右后卫首发差异</li>
+        <li><time>11月7日</time>补时进球归属第二次改判</li>
+        <li><time>11月6日</time>南岸联外援受理编号</li>
+        <li><time>11月5日</time>北区青年联赛改期通知</li>
+        <li><time>11月4日</time>赛前热身拉伤替换记录</li>
+      </ul>
+    </section>
+    <section>
+      <h2>信息分级说明</h2>
+      <p style="font-size:13.4px;color:var(--ink-2);margin:0">已确认：联赛或俱乐部公开渠道可查。待核：有具体出处但缺官方同步。单源转述：只有一个信息源。已撤回：发布者本人说明或官方否认。四档按发布时间归档，不交叉合并。</p>
+    </section>
+  </aside>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#1d6b62"/>
+            <path d="M15 40 L25 20 L33 34 L41 24 L50 42" stroke="#f2b544" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="50" cy="45" r="5" fill="#f2b544"/>
+          </svg>
+          <b>51每日爆料比赛</b>
+        </div>
+        <p class="foot-note">按发布时间归档赛前阵容、临场换人、判罚改判与注册状态，把每条说法的出处、时间和可核对细节放在一起。</p>
+      </div>
+      <div>
+        <h2>爆料分类</h2>
+        <ul>
+          <li><a href="/#featured">赛前首发名单</a></li>
+          <li><a href="/#featured">伤停与康复进度</a></li>
+          <li><a href="/#analysis">补时判罚争议</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>核对工具</h2>
+        <ul>
+          <li><a href="/#guide">五步核对法</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#rank">命中率算法说明</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>互动与更新</h2>
+        <ul>
+          <li><a href="/#comments">读者评论</a></li>
+          <li><a href="/#updates">最新更新</a></li>
+          <li><a href="/#reco">相关推荐</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>页面内球队、账号、比分与注册编号为示例数据，用于说明信息分级与核对方法。更新时间：2026年11月8日 22:20，对应“最新更新”栏目 21:47 与 20:58 两条。</span>
+      <span>© 2026 51每日爆料比赛 · 内容仅供信息核对练习</span>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" type="button" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var menuBtn=document.getElementById('menuBtn');
+  var nav=document.getElementById('mainNav');
+  if(menuBtn&&nav){
+    menuBtn.addEventListener('click',function(){
+      var open=nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded',open?'true':'false');
+    });
+    nav.addEventListener('click',function(e){
+      if(e.target.tagName==='A'&&window.innerWidth<=760){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  var searchInput=document.getElementById('q');
+  var msg=document.getElementById('searchMsg');
+  var items=Array.prototype.slice.call(document.querySelectorAll('main section, aside section, footer section'));
+  function clearHits(){
+    items.forEach(function(el){
+      el.style.outline='';
+      el.style.outlineOffset='';
+    });
+  }
+  function doSearch(){
+    var val=(searchInput.value||'').trim();
+    clearHits();
+    if(!val){
+      msg.style.display='none';
+      msg.textContent='';
+      return;
+    }
+    var hits=[];
+    items.forEach(function(el){
+      if(el.textContent.indexOf(val)>-1){hits.push(el);}
+    });
+    if(hits.length===0){
+      msg.textContent='没有找到包含“'+val+'”的内容，可换成球队名、裁判报告或注册编号再试。';
+      msg.style.display='block';
+      return;
+    }
+    hits[0].style.outline='3px solid #f2b544';
+    hits[0].style.outlineOffset='4px';
+    msg.textContent='找到 '+hits.length+' 个相关板块，已定位到第一个。';
+    msg.style.display='block';
+    hits[0].scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  if(searchInput){
+    searchInput.addEventListener('keydown',function(e){
+      if(e.key==='Enter'){e.preventDefault();doSearch();}
+    });
+    searchInput.addEventListener('search',function(){
+      if(!searchInput.value){clearHits();msg.style.display='none';}
+    });
+    document.addEventListener('click',function(e){
+      if(msg&&!msg.contains(e.target)&&e.target!==searchInput){msg.style.display='none';}
+    });
+  }
+
+  var toTop=document.getElementById('toTop');
+  var ticking=false;
+  window.addEventListener('scroll',function(){
+    if(ticking) return;
+    ticking=true;
+    requestAnimationFrame(function(){
+      if(window.scrollY>520){toTop.classList.add('show');}
+      else{toTop.classList.remove('show');}
+      ticking=false;
+    });
+    highlight();
+  },{passive:true});
+  toTop.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  var sideLinks=Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var targets=sideLinks.map(function(a){
+    var id=a.getAttribute('href').split('#')[1];
+    return document.getElementById(id);
+  });
+  function highlight(){
+    var pos=window.scrollY+160;
+    var current=-1;
+    targets.forEach(function(t,i){
+      if(t&&t.offsetTop<=pos){current=i;}
+    });
+    sideLinks.forEach(function(a,i){
+      a.classList.toggle('active',i===current);
+    });
+  }
+  highlight();
+  window.addEventListener('resize',highlight);
+})();
+</script>
+</body>
+</html>
