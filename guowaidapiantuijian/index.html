@@ -1,0 +1,1080 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>国外大片推荐-院线热门与冷门口碑片单</title>
+<meta name="description" content="国外大片推荐按院线新片、流媒体热榜、冷门佳作三条线整理片单，标注上映日期、片长、评分来源与观看平台，并附选片判断方法与观众评论。">
+<meta name="keywords" content="国外大片推荐">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a1f2b'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23e8b04b' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23e8b04b'/%3E%3Ccircle cx='32' cy='13' r='3.4' fill='%23e8b04b'/%3E%3Ccircle cx='32' cy='51' r='3.4' fill='%23e8b04b'/%3E%3Ccircle cx='13' cy='32' r='3.4' fill='%23e8b04b'/%3E%3Ccircle cx='51' cy='32' r='3.4' fill='%23e8b04b'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1a1f2b;
+  --ink-2:#3a4356;
+  --ink-3:#6b7488;
+  --paper:#f6f3ec;
+  --card:#ffffff;
+  --line:#ddd6c8;
+  --gold:#b8871f;
+  --gold-soft:#f0e2bd;
+  --teal:#1f6b63;
+  --teal-soft:#dcebe7;
+  --red:#9c3a2e;
+  --radius-s:6px;
+  --radius:10px;
+  --radius-l:16px;
+  --shadow:0 1px 2px rgba(26,31,43,.06),0 6px 18px rgba(26,31,43,.06);
+  --shadow-hover:0 2px 4px rgba(26,31,43,.07),0 10px 26px rgba(26,31,43,.10);
+  --maxw:1180px;
+  --sticky-h:88px;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--font);
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.78;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--teal);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{line-height:1.35;margin:0;font-weight:700}
+p{margin:0 0 .9em}
+ul,ol{margin:0 0 .9em;padding-left:1.3em}
+li{margin-bottom:.35em}
+section[id],div[id]{scroll-margin-top:calc(var(--sticky-h) + 14px)}
+
+/* ---------- sticky wrapper ---------- */
+.sticky-top{position:sticky;top:0;z-index:60}
+.notice{
+  background:var(--ink);
+  color:#ece6d8;
+  font-size:13px;
+  letter-spacing:.2px;
+}
+.notice .wrap{
+  max-width:var(--maxw);margin:0 auto;padding:7px 20px;
+  display:flex;gap:12px;align-items:center;flex-wrap:wrap;
+}
+.notice b{color:var(--gold-soft);font-weight:600}
+.notice .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex:none}
+.notice a{color:var(--gold-soft);text-decoration:underline}
+
+.site-header{
+  background:rgba(246,243,236,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  max-width:var(--maxw);margin:0 auto;padding:12px 20px;
+  display:flex;align-items:center;gap:22px;
+}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand svg{width:36px;height:36px;flex:none}
+.brand-name{font-size:19px;font-weight:800;letter-spacing:.5px;color:var(--ink);white-space:nowrap}
+.brand-name:hover{text-decoration:none}
+.nav-main{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+.nav-main a{
+  font-size:15px;color:var(--ink-2);padding:6px 10px;border-radius:var(--radius-s);
+  white-space:nowrap;
+}
+.nav-main a:hover{background:var(--gold-soft);color:var(--ink);text-decoration:none}
+.header-tools{display:flex;align-items:center;gap:8px;flex:none}
+.search-form{display:flex;align-items:center;border:1px solid var(--line);background:#fff;border-radius:999px;padding:3px 4px 3px 12px}
+.search-form input{
+  border:0;outline:none;background:transparent;font:inherit;font-size:14px;width:130px;color:var(--ink);
+}
+.search-form button{
+  border:0;background:var(--ink);color:#f6f3ec;border-radius:999px;
+  font:inherit;font-size:13px;padding:5px 12px;cursor:pointer;
+}
+.search-form button:hover{background:var(--teal)}
+.menu-toggle{
+  display:none;border:1px solid var(--line);background:#fff;border-radius:var(--radius-s);
+  font:inherit;font-size:14px;padding:6px 12px;cursor:pointer;color:var(--ink);
+}
+.menu-toggle:focus-visible,.search-form input:focus-visible,.nav-main a:focus-visible,.side-nav a:focus-visible,button:focus-visible,a:focus-visible,summary:focus-visible{
+  outline:2px solid var(--teal);outline-offset:2px;
+}
+.search-status{font-size:13px;color:var(--ink-3);padding:0 20px 8px;max-width:var(--maxw);margin:0 auto;display:none}
+.search-status.on{display:block}
+
+/* ---------- hero ---------- */
+.hero{
+  background:linear-gradient(160deg,#20273a 0%,#2b3348 55%,#1c2b2c 100%);
+  color:#f2eee2;position:relative;overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(560px 300px at 82% 12%,rgba(232,176,75,.20),transparent 70%);
+}
+.hero-inner{
+  max-width:var(--maxw);margin:0 auto;padding:54px 20px 46px;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;position:relative;z-index:2;
+}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;letter-spacing:2px;color:#e8b04b;text-transform:uppercase;
+  margin-bottom:14px;
+}
+.hero-kicker::before{content:"";width:26px;height:1px;background:#e8b04b;display:block}
+.hero h1{font-size:44px;letter-spacing:1px;margin-bottom:16px}
+.hero-lead{font-size:17px;color:#cfd3dd;max-width:44em;line-height:1.85}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.btn{
+  display:inline-block;padding:11px 22px;border-radius:999px;font-size:15px;font-weight:600;
+  border:1px solid transparent;transition:transform .15s ease, background .15s ease;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-primary{background:var(--gold);color:#241a05}
+.btn-primary:hover{background:#d19b33}
+.btn-ghost{border-color:rgba(242,238,226,.42);color:#f2eee2}
+.btn-ghost:hover{background:rgba(242,238,226,.10)}
+.hero-stats{display:flex;gap:28px;margin-top:30px;flex-wrap:wrap}
+.hero-stats div{font-size:13px;color:#9fa8bc;line-height:1.5}
+.hero-stats strong{display:block;font-size:22px;color:#e8b04b;font-weight:700}
+.hero-art{position:relative;min-height:300px}
+.hero-art svg{width:100%;height:auto;display:block}
+
+/* ---------- layout ---------- */
+.layout{
+  max-width:var(--maxw);margin:0 auto;padding:40px 20px 10px;
+  display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:36px;
+}
+.content{min-width:0}
+.sidebar{min-width:0}
+
+/* ---------- block basics ---------- */
+.block{margin-bottom:46px}
+.block-head{display:flex;align-items:flex-end;gap:14px;margin-bottom:20px;border-bottom:2px solid var(--ink);padding-bottom:9px;flex-wrap:wrap}
+.block-head h2{font-size:23px;letter-spacing:.4px}
+.block-head .tag-index{font-size:12px;color:var(--ink-3);letter-spacing:1px;margin-left:auto}
+.section-note{font-size:14px;color:var(--ink-3);margin:-6px 0 18px}
+
+/* cards grid */
+.grid-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+.card img{width:100%;height:150px;object-fit:cover}
+.card-body{padding:14px 15px 16px;display:flex;flex-direction:column;flex:1}
+.card-meta{font-size:12px;color:var(--ink-3);margin-bottom:6px;display:flex;gap:8px;flex-wrap:wrap}
+.card h3{font-size:16px;margin-bottom:7px}
+.card h3 a{color:var(--ink)}
+.card p{font-size:14px;color:var(--ink-2);margin-bottom:10px}
+.card-foot{margin-top:auto;font-size:13px;color:var(--gold);font-weight:600}
+.badge{
+  display:inline-block;font-size:11px;padding:2px 8px;border-radius:999px;
+  background:var(--teal-soft);color:var(--teal);font-weight:600;
+}
+.badge.gold{background:var(--gold-soft);color:#7a570f}
+.badge.red{background:#f3ddd8;color:var(--red)}
+
+/* compact list */
+.list-news{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+.list-news li{
+  display:grid;grid-template-columns:96px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);margin:0;
+}
+.list-news time{font-size:13px;color:var(--ink-3);font-variant-numeric:tabular-nums;padding-top:2px}
+.list-news a{font-size:15px;font-weight:600;color:var(--ink)}
+.list-news span{display:block;font-size:13px;color:var(--ink-2);font-weight:400;margin-top:2px}
+
+/* channel chips */
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{
+  display:inline-flex;align-items:center;gap:6px;
+  border:1px solid var(--line);background:#fff;border-radius:999px;
+  padding:7px 15px;font-size:14px;color:var(--ink-2);
+}
+.chip:hover{border-color:var(--gold);background:var(--gold-soft);color:var(--ink);text-decoration:none}
+.chip small{color:var(--ink-3);font-size:12px}
+
+/* deep read */
+.deep{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius-l);
+  padding:26px 28px;box-shadow:var(--shadow);
+}
+.deep h2{font-size:23px;margin-bottom:6px}
+.deep h3{font-size:17px;margin:22px 0 8px;color:var(--ink)}
+.deep h3::before{content:"";display:inline-block;width:8px;height:8px;background:var(--gold);border-radius:2px;margin-right:9px;transform:translateY(-1px)}
+.deep p{font-size:15.5px;color:var(--ink-2)}
+.pullquote{
+  border-left:3px solid var(--teal);background:var(--teal-soft);
+  padding:14px 18px;border-radius:0 var(--radius) var(--radius) 0;
+  font-size:15px;color:var(--ink);margin:18px 0;
+}
+.compare{width:100%;border-collapse:collapse;font-size:14px;margin:14px 0}
+.compare caption{text-align:left;font-size:13px;color:var(--ink-3);padding-bottom:6px}
+.compare th,.compare td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.compare th{background:#f2ede1;font-weight:600}
+.checklist{list-style:none;padding:0;margin:10px 0}
+.checklist li{position:relative;padding-left:24px;font-size:14.5px;color:var(--ink-2)}
+.checklist li::before{content:"✓";position:absolute;left:0;color:var(--teal);font-weight:700}
+
+/* numbered steps */
+.steps{counter-reset:step;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.step{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px 18px 16px 56px;position:relative;
+}
+.step::before{
+  counter-increment:step;content:counter(step);
+  position:absolute;left:16px;top:15px;width:28px;height:28px;border-radius:50%;
+  background:var(--ink);color:var(--gold-soft);font-size:14px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
+.step h3{font-size:15.5px;margin-bottom:6px}
+.step p{font-size:14px;color:var(--ink-2);margin:0}
+
+/* faq */
+.faq-list{border-top:1px solid var(--line)}
+.faq-list details{border-bottom:1px solid var(--line);padding:12px 0}
+.faq-list summary{
+  cursor:pointer;font-size:15.5px;font-weight:600;list-style:none;position:relative;
+  padding-right:26px;color:var(--ink);
+}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{
+  content:"+";position:absolute;right:2px;top:-1px;font-size:20px;color:var(--gold);font-weight:400;
+}
+.faq-list details[open] summary::after{content:"−"}
+.faq-list details p{font-size:14.5px;color:var(--ink-2);margin:9px 0 2px}
+
+/* reviews */
+.reviews{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.review{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px 18px;box-shadow:var(--shadow);
+}
+.review p{font-size:14.5px;color:var(--ink-2);margin-bottom:10px}
+.review .who{display:flex;align-items:center;gap:9px;font-size:13px;color:var(--ink-3)}
+.avatar{
+  width:30px;height:30px;border-radius:50%;background:var(--gold-soft);color:#7a570f;
+  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex:none;
+}
+.stars{color:var(--gold);font-size:13px;letter-spacing:1px}
+
+/* timeline */
+.timeline{list-style:none;padding:0;margin:0;position:relative}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.timeline li{position:relative;padding-left:30px;margin-bottom:16px}
+.timeline li::before{
+  content:"";position:absolute;left:0;top:7px;width:16px;height:16px;border-radius:50%;
+  background:#fff;border:3px solid var(--gold);
+}
+.timeline time{display:block;font-size:12.5px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.timeline strong{font-size:15px}
+.timeline p{font-size:14px;color:var(--ink-2);margin:2px 0 0}
+
+/* rank list */
+.rank{list-style:none;counter-reset:rk;padding:0;margin:0}
+.rank li{
+  counter-increment:rk;display:grid;grid-template-columns:36px 1fr auto;gap:12px;align-items:center;
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:11px 15px;margin-bottom:9px;
+}
+.rank li::before{
+  content:counter(rk);font-size:17px;font-weight:800;color:var(--line);
+  font-variant-numeric:tabular-nums;
+}
+.rank li:nth-child(-n+3)::before{color:var(--gold)}
+.rank strong{font-size:15px;display:block}
+.rank span{font-size:13px;color:var(--ink-3);font-weight:400}
+.rank em{font-style:normal;font-size:13px;color:var(--teal);font-weight:600;white-space:nowrap}
+
+/* tags */
+.tags{display:flex;flex-wrap:wrap;gap:9px}
+.tags a{
+  font-size:13.5px;padding:6px 13px;border-radius:var(--radius-s);
+  background:#fff;border:1px solid var(--line);color:var(--ink-2);
+}
+.tags a:hover{background:var(--gold-soft);border-color:var(--gold);color:var(--ink);text-decoration:none}
+
+/* sidebar */
+.side-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px;box-shadow:var(--shadow);margin-bottom:22px;
+}
+.side-card h2{font-size:16px;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.side-nav{list-style:none;padding:0;margin:0}
+.side-nav a{
+  display:block;font-size:14px;color:var(--ink-2);padding:6px 10px;border-radius:var(--radius-s);
+  border-left:3px solid transparent;
+}
+.side-nav a:hover{background:var(--paper);text-decoration:none}
+.side-nav a.active{background:var(--gold-soft);border-left-color:var(--gold);color:var(--ink);font-weight:600}
+.mini-list{list-style:none;padding:0;margin:0;font-size:14px}
+.mini-list li{margin-bottom:9px}
+.mini-list a{color:var(--ink-2)}
+.mini-list a:hover{color:var(--teal)}
+.mini-list time{display:block;font-size:12px;color:var(--ink-3)}
+.side-note{font-size:13px;color:var(--ink-3);line-height:1.7}
+
+/* footer */
+.site-footer{background:var(--ink);color:#b9bfcd;margin-top:20px;font-size:14px}
+.footer-inner{max-width:var(--maxw);margin:0 auto;padding:44px 20px 26px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}
+.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.footer-brand svg{width:32px;height:32px}
+.footer-brand span{font-size:18px;font-weight:800;color:#f2eee2;letter-spacing:.5px}
+.footer-inner h3{font-size:14px;color:#e8b04b;margin-bottom:12px;letter-spacing:1px}
+.footer-inner ul{list-style:none;padding:0;margin:0;font-size:13.5px}
+.footer-inner li{margin-bottom:7px}
+.footer-inner a{color:#b9bfcd}
+.footer-inner a:hover{color:var(--gold-soft)}
+.footer-pos{font-size:13.5px;line-height:1.75;color:#9aa2b3;margin-bottom:12px}
+.footer-meta{font-size:12.5px;color:#7c8496;line-height:1.8}
+.footer-bottom{border-top:1px solid #333b4d;text-align:center;padding:16px 20px;font-size:12.5px;color:#7c8496}
+
+/* back to top */
+#toTop{
+  position:fixed;right:18px;bottom:22px;z-index:70;
+  width:44px;height:44px;border-radius:50%;border:1px solid var(--line);
+  background:#fff;color:var(--ink);font-size:18px;cursor:pointer;
+  box-shadow:var(--shadow);display:none;align-items:center;justify-content:center;
+}
+#toTop.show{display:flex}
+#toTop:hover{background:var(--gold-soft)}
+
+/* focus + motion */
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *{transition:none !important;animation:none !important}
+}
+
+/* responsive */
+@media (max-width:1024px){
+  .layout{grid-template-columns:1fr;gap:30px}
+  .sidebar{order:2}
+  .content{order:1}
+  .grid-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hero h1{font-size:36px}
+  .steps{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr 1fr}
+}
+@media (max-width:820px){
+  .hero-inner{grid-template-columns:1fr;padding-top:40px}
+  .hero-art{min-height:0;max-width:420px}
+  .nav-main{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    background:var(--paper);border-bottom:1px solid var(--line);
+    padding:10px 16px 16px;flex-direction:column;gap:2px;
+    box-shadow:var(--shadow);
+  }
+  .nav-main.open{display:flex}
+  .site-header{position:relative}
+  .header-inner{flex-wrap:wrap;gap:10px}
+  .nav-main{margin-left:0}
+  .nav-main a{padding:9px 10px;font-size:15px}
+  .menu-toggle{display:inline-block}
+  .search-form input{width:100px}
+}
+@media (max-width:600px){
+  body{font-size:15.5px}
+  .hero h1{font-size:30px}
+  .hero-lead{font-size:15.5px}
+  .grid-cards{grid-template-columns:1fr}
+  .reviews{grid-template-columns:1fr}
+  .deep{padding:20px 18px}
+  .footer-inner{grid-template-columns:1fr;padding:34px 18px 20px}
+  .list-news li{grid-template-columns:1fr;gap:2px}
+  .header-inner{padding:10px 16px}
+  .brand-name{font-size:17px}
+  .search-form{flex:1;min-width:0}
+  .search-form input{width:100%;min-width:0}
+  .hero-inner{padding:32px 16px}
+  .layout{padding:28px 16px 6px}
+  .rank li{grid-template-columns:28px 1fr;gap:8px}
+  .rank em{grid-column:2}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"国外大片推荐",
+  "description":"按院线新片、流媒体热榜与冷门口碑片三条线整理国外电影片单，附上映日期、片长、评分来源与选片方法。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"国外大片推荐里，IMDb和烂番茄分数哪个更可信？","acceptedAnswer":{"@type":"Answer","text":"IMDb是用户打分的加权平均，样本量大、口味偏大众，适合判断商业片的基本盘；烂番茄的Tomatometer只统计专业影评人给正面评价的比例，爆米花指数才对应普通观众。想看类型片是否被观众接受，先看爆米花指数；想看作者电影的艺术完成度，Tomatometer更有参考价值。2026年10月《沙丘：第三部》烂番茄新鲜度88%、爆米花指数94%，两个数字的差值说明影评人偏谨慎。"}},
+    {"@type":"Question","name":"国外大片推荐的片单里，流媒体独家和院线片怎么选？","acceptedAnswer":{"@type":"Answer","text":"院线片优先在大银幕看动作调度和声音设计，例如《碟中谍8》的攀爬段落用IMAX画幅拍摄，手机上看不出效果。流媒体独家的优势是节奏可以自己控制，适合长片或剧情密度大的作品。判断标准是片长和视听依赖度：无对白段落多、景别大的片去影院，对话密集、时间线复杂的片在家看更省力。"}},
+    {"@type":"Question","name":"国外大片推荐里的R级和PG-13，对观影体验影响有多大？","acceptedAnswer":{"@type":"Answer","text":"MPAA分级决定的是暴力呈现方式和语言尺度。PG-13允许暗示性暴力和有限脏话，动作片为拿到这个分级常把关键镜头剪在画外；R级可以直拍血浆和尸体特写。同一导演的《死侍3》是R级，台词和打斗都不做收束，和PG-13的漫威主线观感差距明显。带未成年人观影前先确认分级，比看片名判断更可靠。"}},
+    {"@type":"Question","name":"国外大片推荐中的冷门片，靠什么判断值不值得看？","acceptedAnswer":{"@type":"Answer","text":"看三个可核对的东西：电影节单元和获奖记录、发行方、以及首映到上线的时间差。入围威尼斯地平线单元或戛纳一种关注的片，至少说明选片人认为有作者表达；A24、Neon、Mubi这类发行方的片单稳定性较高；首映后半年内上线流媒体，通常意味着院线规模有限。三项里占两项，就值得列入候选。"}},
+    {"@type":"Question","name":"国外大片推荐里的片长超过150分钟，观影前要做什么准备？","acceptedAnswer":{"@type":"Answer","text":"先确认版本。《拿破仑》导演剪辑版214分钟，院线版158分钟，两者差了一整条战役线。其次看排片场次，长片在普通厅的场次少，晚场结束后公共交通可能已停。带孩子或长辈观影，优先选下午场，中间离场会错过关键段。"}}
+  ]
+}
+</script>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-top">
+  <div class="notice">
+    <div class="wrap">
+      <span class="dot" aria-hidden="true"></span>
+      <span><b>11月7日更新</b> 本周新增 6 部片源：《沙丘：第三部》IMAX版密钥延至11月20日，A24《物质主义者》上线 Mubi，附 3 条版本差异说明。</span>
+      <a href="/#latest">查看更新条目</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/#top" aria-label="国外大片推荐首页">
+        <svg viewBox="0 0 64 64" role="img" aria-hidden="true" focusable="false">
+          <rect width="64" height="64" rx="14" fill="#1a1f2b"/>
+          <circle cx="32" cy="32" r="17" fill="none" stroke="#e8b04b" stroke-width="3.4"/>
+          <circle cx="32" cy="32" r="4.6" fill="#e8b04b"/>
+          <circle cx="32" cy="14" r="3" fill="#e8b04b"/>
+          <circle cx="32" cy="50" r="3" fill="#e8b04b"/>
+          <circle cx="14" cy="32" r="3" fill="#e8b04b"/>
+          <circle cx="50" cy="32" r="3" fill="#e8b04b"/>
+          <circle cx="32" cy="32" r="10.5" fill="none" stroke="#e8b04b" stroke-width="1.2" stroke-dasharray="2 4"/>
+        </svg>
+        <span class="brand-name">国外大片推荐</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">导航菜单</button>
+
+      <nav class="nav-main" id="mainNav" aria-label="主题导航">
+        <a href="/#overview">领域概览</a>
+        <a href="/#picks">精选片单</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#channels">分类入口</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#reviews">观众评论</a>
+      </nav>
+
+      <div class="header-tools">
+        <form class="search-form" id="searchForm" role="search" aria-label="站内本地查找">
+          <input type="search" id="searchInput" placeholder="搜片名或导演" aria-label="输入片名或导演名">
+          <button type="submit">查找</button>
+        </form>
+      </div>
+    </div>
+    <p class="search-status" id="searchStatus" role="status" aria-live="polite"></p>
+  </header>
+</div>
+
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="hero-kicker">院线 · 流媒体 · 冷门佳作</p>
+      <h1>国外大片推荐</h1>
+      <p class="hero-lead">把北美、欧洲、日韩的院线新片和流媒体独家用一张表对齐：上映或上线日期、片长、分级、评分来源、可看平台。商业大制作和电影节冷门片分开列，不混排，方便按当晚能坐多久决定看哪部。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/#picks">看本周精选片单</a>
+        <a class="btn btn-ghost" href="/#deep">读选片判断依据</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>46</strong>在列片目</div>
+        <div><strong>9</strong>内容频道</div>
+        <div><strong>11月7日</strong>更新条目</div>
+      </div>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 420 320" role="presentation" focusable="false">
+        <defs>
+          <linearGradient id="beam" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#e8b04b" stop-opacity=".55"/>
+            <stop offset="100%" stop-color="#e8b04b" stop-opacity="0"/>
+          </linearGradient>
+          <linearGradient id="scr" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#3d4a63"/>
+            <stop offset="100%" stop-color="#232c3f"/>
+          </linearGradient>
+        </defs>
+        <circle cx="330" cy="70" r="86" fill="url(#beam)"/>
+        <rect x="64" y="58" width="248" height="150" rx="10" fill="url(#scr)" stroke="#5a6a8a" stroke-width="2"/>
+        <rect x="76" y="70" width="224" height="126" rx="5" fill="#151b28"/>
+        <circle cx="188" cy="133" r="30" fill="none" stroke="#e8b04b" stroke-width="2.6" stroke-dasharray="4 7"/>
+        <circle cx="188" cy="133" r="7" fill="#e8b04b"/>
+        <path d="M40 236h296" stroke="#5a6a8a" stroke-width="2"/>
+        <g fill="#2f3a51" stroke="#5a6a8a" stroke-width="1.4">
+          <rect x="58" y="236" width="18" height="26" rx="4"/>
+          <rect x="96" y="236" width="18" height="20" rx="4"/>
+          <rect x="134" y="236" width="18" height="26" rx="4"/>
+          <rect x="172" y="236" width="18" height="18" rx="4"/>
+          <rect x="210" y="236" width="18" height="26" rx="4"/>
+          <rect x="248" y="236" width="18" height="20" rx="4"/>
+          <rect x="286" y="236" width="18" height="24" rx="4"/>
+        </g>
+        <g stroke="#e8b04b" stroke-width="2" fill="none" stroke-linecap="round">
+          <path d="M330 168v42"/>
+          <path d="M316 182l14 14 14-14"/>
+        </g>
+        <text x="76" y="292" fill="#8d97ad" font-size="13" font-family="PingFang SC,Microsoft YaHei,sans-serif">院线密钥 · 流媒体上线 · 导演剪辑版</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="layout">
+  <main class="content" id="mainContent">
+
+    <!-- 1 领域概览 -->
+    <section class="block" id="overview">
+      <div class="block-head">
+        <h2>领域概览：一条片单背后的四组参数</h2>
+        <span class="tag-index">01</span>
+      </div>
+      <p>国外电影的可看性大致由四组参数决定：发行路径、分级、片长、评分来源。发行路径分院线首映、流媒体独家、电影节首映后转售三种，2026年秋季的北美市场上，《沙丘：第三部》走的是院线加IMAX独占窗口，《物质主义者》由A24在9月限定院线后于11月6日上Mubi，两条路的观看成本差出一张电影票钱。</p>
+      <p>分级不是品质标签，却直接决定镜头语言。PG-13的战争片常用画外音和快速剪辑代替尸体特写，R级可以把血浆留在画面里。片长150分钟以上的作品，普通厅场次少，晚场散场后地铁末班车容易赶不上。评分来源要分人群，IMDb反映的是全球用户加权分，烂番茄的Tomatometer统计影评人正面评价比例，Metacritic用加权平均折算成百分制。</p>
+      <div class="chips" style="margin-top:16px">
+        <a class="chip" href="/#channels">院线首映 <small>窗口期约45天</small></a>
+        <a class="chip" href="/#channels">流媒体独家 <small>12部在列</small></a>
+        <a class="chip" href="/#channels">电影节首映 <small>8部</small></a>
+        <a class="chip" href="/#channels">导演剪辑版 <small>3部</small></a>
+        <a class="chip" href="/#channels">重映与修复 <small>5部</small></a>
+      </div>
+    </section>
+
+    <!-- 2 精选内容推荐 -->
+    <section class="block" id="picks">
+      <div class="block-head">
+        <h2>精选内容推荐：本周六部可下单的片</h2>
+        <span class="tag-index">02</span>
+      </div>
+      <p class="section-note">选片标准为11月6日前可购票或可播放，且至少有一个可核对的评分来源。</p>
+      <div class="grid-cards">
+        <article class="card">
+          <img src="https://picsum.photos/seed/dune3desert/480/280" width="480" height="280" loading="lazy" alt="沙漠地貌与巨大机械装置的电影概念画面" style="object-fit:cover">
+          <div class="card-body">
+            <div class="card-meta"><span class="badge">院线</span><span>165分钟</span><span>PG-13</span></div>
+            <h3><a href="/#deep">《沙丘：第三部》IMAX画幅段落分析</a></h3>
+            <p>10月31日北美上映，烂番茄新鲜度88%，爆米花指数94%。全片约40分钟使用1.43:1画幅，普通厅会裁切上下。</p>
+            <div class="card-foot">维伦纽瓦 · 华纳兄弟</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://picsum.photos/seed/materialistsnyc/480/280" width="480" height="280" loading="lazy" alt="纽约街头夜景与橱窗灯光的电影剧照风格画面" style="object-fit:cover">
+          <div class="card-body">
+            <div class="card-meta"><span class="badge gold">流媒体</span><span>142分钟</span><span>R级</span></div>
+            <h3><a href="/#latest">《物质主义者》11月6日上线 Mubi</a></h3>
+            <p>贝克执导，9月限定院线四周后转流媒体。对话密度高，Metacritic 79分，适合在家分两段看。</p>
+            <div class="card-foot">A24 · 英语对白</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://picsum.photos/seed/mi8climb/480/280" width="480" height="280" loading="lazy" alt="高空攀爬动作场景的电影画面" style="object-fit:cover">
+          <div class="card-body">
+            <div class="card-meta"><span class="badge">院线</span><span>163分钟</span><span>PG-13</span></div>
+            <h3><a href="/#latest">《碟中谍8》密钥延至11月20日</a></h3>
+            <p>攀爬段落实拍，声音设计依赖影院低频。IMDb 7.9，观众评分高于影评人约0.6分。</p>
+            <div class="card-foot">派拉蒙 · 麦夸里</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://picsum.photos/seed/koreathriller/480/280" width="480" height="280" loading="lazy" alt="雨夜巷口的东亚城市街景电影画面" style="object-fit:cover">
+          <div class="card-body">
+            <div class="card-meta"><span class="badge red">冷门</span><span>118分钟</span><span>15禁</span></div>
+            <h3><a href="/#channels">《无声的港口》韩国犯罪片</a></h3>
+            <p>10月17日韩国上映，釜山电影节新浪潮单元入围。国内暂无引进消息，港澳地区11月13日上画。</p>
+            <div class="card-foot">发行：CJ ENM</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://picsum.photos/seed/venicehorizon/480/280" width="480" height="280" loading="lazy" alt="威尼斯水岸与灰蓝色天空的电影剧照" style="object-fit:cover">
+          <div class="card-body">
+            <div class="card-meta"><span class="badge red">电影节</span><span>127分钟</span><span>R级</span></div>
+            <h3><a href="/#deep">《潮汐带》威尼斯地平线单元</a></h3>
+            <p>意大利与法国合拍，11月2日北美限定两馆。烂番茄暂无新鲜度，7条影评里5条正面。</p>
+            <div class="card-foot">Neon 发行</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://picsum.photos/seed/animationforest/480/280" width="480" height="280" loading="lazy" alt="手绘风格森林与光斑的动画电影画面" style="object-fit:cover">
+          <div class="card-body">
+            <div class="card-meta"><span class="badge gold">动画</span><span>104分钟</span><span>PG</span></div>
+            <h3><a href="/#latest">《苔原上的信》日本动画长片</a></h3>
+            <p>10月24日日本公映，11月5日北美限定上映。手绘背景，适合带小学生观看，台词无字幕依赖。</p>
+            <div class="card-foot">GKIDS · 日语原声</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3 最新更新 -->
+    <section class="block" id="latest">
+      <div class="block-head">
+        <h2>最新更新：密钥、上线、版本三条线</h2>
+        <span class="tag-index">03</span>
+      </div>
+      <ul class="list-news">
+        <li>
+          <time datetime="2026-11-07">11月7日</time>
+          <div><a href="/#picks">《沙丘：第三部》IMAX密钥延至11月20日</a><span>华纳兄弟确认延期两周，普通厅版本11月14日起缩减排片，属于院线排片调整而非新版本。</span></div>
+        </li>
+        <li>
+          <time datetime="2026-11-06">11月6日</time>
+          <div><a href="/#picks">《物质主义者》Mubi 全球上线</a><span>上线版本142分钟，与9月院线版时长一致，无新增镜头；字幕提供简体中文与繁体中文两条。</span></div>
+        </li>
+        <li>
+          <time datetime="2026-11-05">11月5日</time>
+          <div><a href="/#channels">《苔原上的信》北美限定四馆</a><span>GKIDS 发行，英语字幕版，日语原声。首周末单馆票房2.1万美元，属艺术院线常规水平。</span></div>
+        </li>
+        <li>
+          <time datetime="2026-11-03">11月3日</time>
+          <div><a href="/#deep">《拿破仑》导演剪辑版上线 Apple TV+</a><span>214分钟，比院线版多出56分钟，主要补的是奥斯特里茨战役前的行军段落与约瑟夫线。</span></div>
+        </li>
+        <li>
+          <time datetime="2026-10-30">10月30日</time>
+          <div><a href="/#reviews">《无声的港口》釜山放映后口碑分化</a><span>韩国媒体评分7.1，观众评分8.4，差在结尾处理方式，争议集中在最后12分钟。</span></div>
+        </li>
+        <li>
+          <time datetime="2026-10-28">10月28日</time>
+          <div><a href="/#channels">《潮汐带》北美发行权落地 Neon</a><span>11月2日两馆开画，12月上线流媒体的窗口期尚未公布，按 Neon 惯例约90天。</span></div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 4 分类入口 -->
+    <section class="block" id="channels">
+      <div class="block-head">
+        <h2>分类入口：按类型与发行方式找片</h2>
+        <span class="tag-index">04</span>
+      </div>
+      <div class="chips">
+        <a class="chip" href="/#picks">科幻与太空歌剧 <small>7部</small></a>
+        <a class="chip" href="/#picks">动作与谍战 <small>9部</small></a>
+        <a class="chip" href="/#picks">犯罪与黑色电影 <small>6部</small></a>
+        <a class="chip" href="/#picks">作者电影与电影节 <small>8部</small></a>
+        <a class="chip" href="/#picks">动画长片 <small>5部</small></a>
+        <a class="chip" href="/#picks">恐怖与惊悚 <small>4部</small></a>
+        <a class="chip" href="/#picks">传记与历史 <small>5部</small></a>
+        <a class="chip" href="/#picks">喜剧与爱情 <small>4部</small></a>
+        <a class="chip" href="/#picks">日韩院线新片 <small>6部</small></a>
+        <a class="chip" href="/#picks">导演剪辑版 <small>3部</small></a>
+        <a class="chip" href="/#picks">修复重映 <small>5部</small></a>
+        <a class="chip" href="/#picks">R级与限制级 <small>11部</small></a>
+      </div>
+      <p style="margin-top:18px;font-size:14px;color:var(--ink-3)">分类按题材与发行方式并行标注，同一部片可能在两个入口出现。例如《无声的港口》同时归入犯罪与黑色电影、日韩院线新片，但片单里只出现一次。</p>
+    </section>
+
+    <!-- 5 深度解析 -->
+    <section class="block deep" id="deep">
+      <h2>深度解析：评分高的片，为什么散场后没人讨论</h2>
+      <p>10月到11月的北美院线里，有三部片子的评分和讨论量明显不匹配：《沙丘：第三部》IMDb 8.2、讨论量正常；《潮汐带》7条影评5条正面、但社交平台提及量不足千条；《物质主义者》Metacritic 79、上线首日观看完成率约61%。分数和传播之间隔着一层东西，值得拆开看。</p>
+
+      <h3>一、时间线：首映窗口与讨论窗口错位</h3>
+      <p>《潮汐带》9月4日在威尼斯首映，北美11月2日才开两馆。中间隔了59天，影评人的稿子在第一周就发完了，观众能看到正片时热度已经过去。同期《沙丘：第三部》10月31日上映，10月28日就有IMAX点映场，评论和观影几乎同周发生。发行窗口期的长度，直接决定了口碑能不能叠到票房上。</p>
+      <p>这里可以核对：威尼斯首映报道集中在9月4日至7日，Neon的北美发行公告发布于10月28日，中间七周没有新的物料投放。讨论断档不是片子的问题，是发行节奏的问题。</p>
+
+      <div class="pullquote">一个可被反驳的判断：电影节口碑片的北美票房上限，主要由首映到公映的天数决定，而不是影评分数。天数在45天以内的片，单馆票房普遍高于跨季度发行的片。</div>
+
+      <h3>二、数据对比：三种评分口径的差值</h3>
+      <table class="compare">
+        <caption>2026年10月—11月四部片子的评分差值（数据采集至11月7日）</caption>
+        <thead>
+          <tr><th>片名</th><th>烂番茄新鲜度</th><th>爆米花指数</th><th>IMDb</th><th>差值说明</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>沙丘：第三部</td><td>88%</td><td>94%</td><td>8.2</td><td>观众高于影评人6个百分点，特效与音效驱动</td></tr>
+          <tr><td>物质主义者</td><td>83%</td><td>71%</td><td>7.0</td><td>影评人高于观众12个百分点，对话节奏分众明显</td></tr>
+          <tr><td>碟中谍8</td><td>79%</td><td>92%</td><td>7.9</td><td>类型片典型差值13个百分点，动作场面撑住体验</td></tr>
+          <tr><td>无声的港口</td><td>暂无</td><td>暂无</td><td>7.6</td><td>权重样本不足，韩国媒体7.1对观众8.4</td></tr>
+        </tbody>
+      </table>
+      <p>差值的方向比绝对值有用。观众分高于影评人分，通常意味着影片靠视听或类型满足感取胜；影评人分高于观众分，多半是叙事密度高、节奏慢，需要更高的专注度。《物质主义者》的12个百分点差值，与首日完成率61%是同一件事的两个侧面。</p>
+
+      <h3>三、规则前后变化：分级与版本对观感的影响</h3>
+      <p>《死侍3》2024年拿到R级，同期漫威主线作品维持PG-13，两者在打斗呈现上的差别可量化：R级版本平均每个动作段落的镜头切换次数少约30%，因为不需要用剪辑规避血浆。反过来，《拿破仑》导演剪辑版从158分钟加到214分钟，新增的56分钟里约34分钟是战役调度与行军细节，文戏比例上升，节奏变慢，IMDb分数从院线版的6.4回升到7.1。</p>
+      <p>这组变化说明，版本和分级不是营销话术，是能改变影片结构的东西。看片前确认版本，比看评分更实际。</p>
+
+      <h3>四、可核对的判断拆解</h3>
+      <ul class="checklist">
+        <li>首映到公映的天数：威尼斯9月4日到北美11月2日共59天，超过45天阈值，符合“讨论断档”条件。</li>
+        <li>评分样本量：烂番茄新鲜度需至少5条影评才显示，《潮汐带》7条，处在刚够线的位置，代表性有限。</li>
+        <li>发行方历史窗口期：Neon 近三年作品院线到流媒体平均间隔92天，本次尚未公布。</li>
+        <li>观众完成率：《物质主义者》首日61%，低于同平台同期均值约9个百分点。</li>
+      </ul>
+    </section>
+
+    <!-- 6 体验指南 -->
+    <section class="block" id="guide">
+      <div class="block-head">
+        <h2>体验指南：从购票到字幕的四个动作</h2>
+        <span class="tag-index">06</span>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3>先确认影院拷贝版本</h3>
+          <p>《沙丘：第三部》1.43:1画幅只在IMAX GT与部分激光厅完整呈现，普通厅裁切后损失约26%画面。购票页会标注“IMAX”或“激光IMAX”，只写“巨幕”的不算。</p>
+        </div>
+        <div class="step">
+          <h3>核对片长与散场交通</h3>
+          <p>163分钟的《碟中谍8》晚场若19:30开场，散场约22:15，加上片尾字幕和离场时间接近22:30。地铁末班车在23点前后的城市，选18:30场更稳。</p>
+        </div>
+        <div class="step">
+          <h3>流媒体片源看字幕轨</h3>
+          <p>Mubi上线的《物质主义者》提供简繁两条中文字幕，翻译口径不同。片中涉及法律术语的段落，繁体轨用“契约”对应简体轨的“合同”，理解契约关系的观众建议用繁体轨。</p>
+        </div>
+        <div class="step">
+          <h3>分级与同行人匹配</h3>
+          <p>R级片带14岁以下观众，部分影院要求成人全程陪同。PG-13的《碟中谍8》可以带10岁以上孩子，但攀爬段落有高空失重感，恐高的观众避开前排。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 口碑榜单 -->
+    <section class="block" id="rank">
+      <div class="block-head">
+        <h2>本周口碑榜：按观众完成度排</h2>
+        <span class="tag-index">07</span>
+      </div>
+      <p class="section-note">排序依据为上线首周完成率与观众评分，不是票房。数据截至11月7日。</p>
+      <ol class="rank">
+        <li><div><strong>碟中谍8</strong><span>派拉蒙 · 院线 · 完成度未公开</span></div><em>爆米花 92%</em></li>
+        <li><div><strong>沙丘：第三部</strong><span>华纳兄弟 · IMAX · 密钥延至11月20日</span></div><em>IMDb 8.2</em></li>
+        <li><div><strong>苔原上的信</strong><span>GKIDS · 艺术院线 · 四馆</span></div><em>观众 8.6</em></li>
+        <li><div><strong>无声的港口</strong><span>CJ ENM · 韩国 · 争议结尾</span></div><em>观众 8.4</em></li>
+        <li><div><strong>物质主义者</strong><span>A24 · Mubi · 首日完成率61%</span></div><em>MC 79</em></li>
+        <li><div><strong>潮汐带</strong><span>Neon · 两馆 · 7条影评</span></div><em>5/7 正面</em></li>
+      </ol>
+    </section>
+
+    <!-- 8 FAQ -->
+    <section class="block" id="faq">
+      <div class="block-head">
+        <h2>常见问题：评分、分级、版本与片长</h2>
+        <span class="tag-index">08</span>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>IMDb 和烂番茄分数哪个更可信？</summary>
+          <p>IMDb 是用户打分的加权平均，样本量大、口味偏大众，适合判断商业片的基本盘。烂番茄的 Tomatometer 只统计专业影评人给正面评价的比例，爆米花指数才对应普通观众。想看类型片是否被观众接受，先看爆米花指数；想看作者电影的完成度，Tomatometer 更有参考价值。《沙丘：第三部》88% 对 94%，两个数字的差说明影评人更谨慎。</p>
+        </details>
+        <details>
+          <summary>流媒体独家和院线片怎么选？</summary>
+          <p>院线片优先在大银幕看动作调度和声音设计，《碟中谍8》的攀爬段落实拍，手机上看不出画幅与低频效果。流媒体独家的优势是节奏可以自己控制，适合长片或对话密集的作品。判断标准是片长和视听依赖度：无对白段落多、景别大的片去影院，时间线复杂的片在家看更省力。</p>
+        </details>
+        <details>
+          <summary>R级和PG-13对观影体验影响有多大？</summary>
+          <p>MPAA 分级决定暴力呈现方式和语言尺度。PG-13 允许暗示性暴力和有限脏话，动作片为拿到这个分级常把关键镜头剪在画外；R级可以直拍血浆和尸体特写。《死侍3》是R级，台词和打斗都不做收束，和 PG-13 的主线作品观感差距明显。带未成年人观影前先确认分级，比看片名判断可靠。</p>
+        </details>
+        <details>
+          <summary>冷门片靠什么判断值不值得看？</summary>
+          <p>看三个可核对的东西：电影节单元和获奖记录、发行方、首映到上线的时间差。入围威尼斯地平线单元或戛纳一种关注的片，至少说明选片人认为有作者表达；A24、Neon、Mubi 这类发行方的片单稳定性较高；首映后半年内上线流媒体，通常意味着院线规模有限。三项里占两项就值得列入候选。</p>
+        </details>
+        <details>
+          <summary>片长超过150分钟要做什么准备？</summary>
+          <p>先确认版本。《拿破仑》导演剪辑版214分钟，院线版158分钟，两者差了一整条战役线。其次看排片场次，长片在普通厅场次少，晚场结束后公共交通可能已停。带孩子或长辈观影，优先选下午场，中途离场会错过关键段。</p>
+        </details>
+        <details>
+          <summary>日韩片在国内看不到怎么办？</summary>
+          <p>《无声的港口》目前无引进消息，港澳地区11月13日上画。常见路径有三种：等流媒体版权，韩国片通常在上映后90到120天登陆本土平台；关注香港国际电影节的展映场；或者等蓝光与数字版发售。三条路径的时间差通常在一个季度内。</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- 9 用户评论 -->
+    <section class="block" id="reviews">
+      <div class="block-head">
+        <h2>观众评论：散场后的真实反应</h2>
+        <span class="tag-index">09</span>
+      </div>
+      <div class="reviews">
+        <article class="review">
+          <p>《沙丘：第三部》看的激光IMAX，40分钟画幅切换那段值回票价。但普通厅的朋友说上下被裁，沙漠全景变成了中景，同一个片子看出两种感觉。</p>
+          <div class="who"><span class="avatar">周</span><span>周砚 · 11月2日 · <span class="stars">★★★★☆</span></span></div>
+        </article>
+        <article class="review">
+          <p>《物质主义者》在Mubi上分两晚看完。对话写得好，但第一晚看到第70分钟确实困，节奏不快。贝克这次把纽约拍得很干净，反而有点不真实。</p>
+          <div class="who"><span class="avatar">林</span><span>林小满 · 11月6日 · <span class="stars">★★★☆☆</span></span></div>
+        </article>
+        <article class="review">
+          <p>《无声的港口》最后12分钟把前面攒的可信度耗掉一半。反派动机交代得太省，靠一句字幕说明，出戏。前面100分钟其实很稳。</p>
+          <div class="who"><span class="avatar">郑</span><span>郑叙 · 10月31日 · <span class="stars">★★★☆☆</span></span></div>
+        </article>
+        <article class="review">
+          <p>IMDb 7.9有点虚高，《碟中谍8》中段在维也纳的追踪戏拖了，两次重复同一套换车手法。攀爬段落是真厉害，实拍感骗不了人。</p>
+          <div class="who"><span class="avatar">何</span><span>何一舟 · 11月4日 · <span class="stars">★★★☆☆</span></span></div>
+        </article>
+        <article class="review">
+          <p>带二年级孩子看《苔原上的信》，全程没问什么时候结束，说明节奏抓得住。手绘背景的雾和光斑，小孩指着说像水彩。</p>
+          <div class="who"><span class="avatar">罗</span><span>罗晓 · 11月5日 · <span class="stars">★★★★★</span></span></div>
+        </article>
+        <article class="review">
+          <p>《潮汐带》两馆根本抢不到票，周末场全满。等流媒体吧，按Neon的节奏大概要到明年2月，希望别像上部片那样拖到半年后。</p>
+          <div class="who"><span class="avatar">徐</span><span>徐迟 · 11月3日 · <span class="stars">★★★★☆</span></span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 10 相关资讯 -->
+    <section class="block" id="news">
+      <div class="block-head">
+        <h2>相关资讯：发行、节展与产业侧</h2>
+        <span class="tag-index">10</span>
+      </div>
+      <ul class="list-news">
+        <li>
+          <time datetime="2026-11-06">11月6日</time>
+          <div><a href="/#deep">美国导演工会公布年度长片提名初选名单</a><span>五部入围作品中三部为国际合拍，发行方分属华纳、Neon、A24，与本次片单重叠两部。</span></div>
+        </li>
+        <li>
+          <time datetime="2026-11-02">11月2日</time>
+          <div><a href="/#channels">东京国际电影节闭幕，最佳影片颁给日本本土作品</a><span>评审团主席在发布会提到，长片的节奏判断是今年讨论焦点，与片长话题呼应。</span></div>
+        </li>
+        <li>
+          <time datetime="2026-10-29">10月29日</time>
+          <div><a href="/#latest">流媒体平台调整窗口期政策</a><span>部分平台把院线到上线的间隔从45天缩短到32天，影响《物质主义者》之后的发行节奏判断。</span></div>
+        </li>
+        <li>
+          <time datetime="2026-10-25">10月25日</time>
+          <div><a href="/#picks">欧洲电影市场公布下年度预售片单</a><span>科幻与历史传记两类占预售总量约四成，与今年院线供给结构一致。</span></div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 11 相关推荐 -->
+    <section class="block" id="related">
+      <div class="block-head">
+        <h2>相关推荐：按具体需求找下一部</h2>
+        <span class="tag-index">11</span>
+      </div>
+      <div class="tags">
+        <a href="/#picks">适合IMAX看的科幻片</a>
+        <a href="/#picks">150分钟以上长片</a>
+        <a href="/#picks">R级动作片</a>
+        <a href="/#picks">A24发行片单</a>
+        <a href="/#picks">威尼斯地平线单元入围</a>
+        <a href="/#picks">导演剪辑版对比</a>
+        <a href="/#picks">带小孩能看的动画长片</a>
+        <a href="/#picks">韩国犯罪片</a>
+        <a href="/#picks">日本手绘动画</a>
+        <a href="/#picks">电影节首映后转流媒体</a>
+        <a href="/#picks">烂番茄90%以上</a>
+        <a href="/#picks">修复重映经典</a>
+        <a href="/#picks">法律题材对话片</a>
+        <a href="/#picks">实拍特技动作场景</a>
+      </div>
+    </section>
+
+    <!-- 12 补充板块：可信度分层 -->
+    <section class="block" id="credibility">
+      <div class="block-head">
+        <h2>可信度分层：每条信息背后是什么来源</h2>
+        <span class="tag-index">12</span>
+      </div>
+      <div class="grid-cards" style="grid-template-columns:repeat(3,minmax(0,1fr))">
+        <article class="card" style="box-shadow:none">
+          <div class="card-body">
+            <div class="card-meta"><span class="badge">可直接核对</span></div>
+            <h3>官方公告与购票页</h3>
+            <p>上映日期、片长、分级、密钥延期以发行方公告和影院购票页为准。本文片长数据取自各片官方页面，11月7日复核。</p>
+          </div>
+        </article>
+        <article class="card" style="box-shadow:none">
+          <div class="card-body">
+            <div class="card-meta"><span class="badge gold">需交叉比对</span></div>
+            <h3>评分平台与完成率</h3>
+            <p>IMDb、烂番茄、Metacritic 各有样本偏差。完成率来自平台公开口径，样本未公开，只能作为趋势参考，不能当作定论。</p>
+          </div>
+        </article>
+        <article class="card" style="box-shadow:none">
+          <div class="card-body">
+            <div class="card-meta"><span class="badge red">传闻与推测</span></div>
+            <h3>未确认的档期与引进</h3>
+            <p>《无声的港口》国内引进消息目前无官方来源，社交平台流传的“已过审”说法标注为推测，不作购票依据。港澳上映日期以当地院线公告为准。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <aside class="sidebar" aria-label="侧栏">
+    <div class="side-card">
+      <h2>页内导航</h2>
+      <ul class="side-nav" id="sideNav">
+        <li><a href="/#overview">领域概览</a></li>
+        <li><a href="/#picks">精选片单</a></li>
+        <li><a href="/#latest">最新更新</a></li>
+        <li><a href="/#channels">分类入口</a></li>
+        <li><a href="/#deep">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#rank">本周口碑榜</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#reviews">观众评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#related">相关推荐</a></li>
+        <li><a href="/#credibility">可信度分层</a></li>
+      </ul>
+    </div>
+
+    <div class="side-card">
+      <h2>三日热门条目</h2>
+      <ul class="mini-list">
+        <li><a href="/#picks">《沙丘：第三部》画幅段落拆解</a><time datetime="2026-11-07">11月7日 · 更新密钥</time></li>
+        <li><a href="/#deep">《物质主义者》完成率与评分差值</a><time datetime="2026-11-06">11月6日</time></li>
+        <li><a href="/#latest">《拿破仑》导演剪辑版新增56分钟</a><time datetime="2026-11-03">11月3日</time></li>
+        <li><a href="/#reviews">《无声的港口》结尾争议</a><time datetime="2026-10-31">10月31日</time></li>
+      </ul>
+    </div>
+
+    <div class="side-card">
+      <h2>选片小工具</h2>
+      <p class="side-note">只带100分钟空档：选《苔原上的信》104分钟，误差4分钟。<br>要一次看完不中断：避开214分钟的导演剪辑版。<br>带长辈同行：PG-13优先，R级先说明镜头尺度。</p>
+    </div>
+  </aside>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">
+        <svg viewBox="0 0 64 64" role="img" aria-hidden="true" focusable="false">
+          <rect width="64" height="64" rx="14" fill="#e8b04b"/>
+          <circle cx="32" cy="32" r="17" fill="none" stroke="#1a1f2b" stroke-width="3.4"/>
+          <circle cx="32" cy="32" r="4.6" fill="#1a1f2b"/>
+          <circle cx="32" cy="14" r="3" fill="#1a1f2b"/>
+          <circle cx="32" cy="50" r="3" fill="#1a1f2b"/>
+          <circle cx="14" cy="32" r="3" fill="#1a1f2b"/>
+          <circle cx="50" cy="32" r="3" fill="#1a1f2b"/>
+        </svg>
+        <span>国外大片推荐</span>
+      </div>
+      <p class="footer-pos">按发行窗口、分级和片长把海外院线片与流媒体独家企业排成可比对的行，看完能决定买哪场票。</p>
+      <p class="footer-meta">更新时间：2026年11月7日 · 对应条目：《沙丘：第三部》密钥延期、《物质主义者》Mubi 上线、《苔原上的信》北美四馆开画。<br>片中信息为示例数据，购票与播放以发行方与平台页面为准。</p>
+    </div>
+    <div>
+      <h3>片单栏目</h3>
+      <ul>
+        <li><a href="/#picks">本周精选</a></li>
+        <li><a href="/#rank">口碑榜</a></li>
+        <li><a href="/#channels">分类入口</a></li>
+        <li><a href="/#related">相关推荐</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>判断参考</h3>
+      <ul>
+        <li><a href="/#deep">评分口径对比</a></li>
+        <li><a href="/#guide">版本与字幕</a></li>
+        <li><a href="/#faq">分级与片长</a></li>
+        <li><a href="/#credibility">可信度分层</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>互动与更新</h3>
+      <ul>
+        <li><a href="/#reviews">观众评论</a></li>
+        <li><a href="/#latest">最新更新</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#top">回到顶部</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 国外大片推荐 · 示例内容站点，不提供影片下载与在线播放</div>
+</footer>
+
+<button id="toTop" aria-label="回到顶部" title="回到顶部">↑</button>
+
+<script>
+(function(){
+  var menuBtn = document.getElementById('menuToggle');
+  var nav = document.getElementById('mainNav');
+  if(menuBtn && nav){
+    menuBtn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.innerWidth <= 820){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  var form = document.getElementById('searchForm');
+  var input = document.getElementById('searchInput');
+  var status = document.getElementById('searchStatus');
+  if(form && input && status){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var q = input.value.trim();
+      if(!q){ status.textContent = ''; status.classList.remove('on'); return; }
+      var nodes = document.querySelectorAll('main h3, main h2, main li, main .review p, .side-card li');
+      var hit = 0;
+      var first = null;
+      nodes.forEach(function(n){
+        n.style.background = '';
+      });
+      nodes.forEach(function(n){
+        if(n.textContent && n.textContent.indexOf(q) > -1){
+          hit++;
+          n.style.background = '#f0e2bd';
+          if(!first) first = n;
+        }
+      });
+      status.classList.add('on');
+      if(hit === 0){
+        status.textContent = '没有找到「' + q + '」相关片目，换个片名或导演名试试。';
+      }else{
+        status.textContent = '找到 ' + hit + ' 处与「' + q + '」相关的内容' + (first ? '，已高亮标出。' : '。');
+        if(first) first.scrollIntoView({behavior:'smooth', block:'center'});
+      }
+    });
+  }
+
+  var links = document.querySelectorAll('#sideNav a');
+  var sections = [];
+  links.forEach(function(a){
+    var id = a.getAttribute('href').replace('/#','');
+    var el = document.getElementById(id);
+    if(el) sections.push({el: el, a: a});
+  });
+  if('IntersectionObserver' in window && sections.length){
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        var match = sections.find(function(s){ return s.el === en.target; });
+        if(!match) return;
+        if(en.isIntersecting){
+          sections.forEach(function(s){ s.a.classList.remove('active'); });
+          match.a.classList.add('active');
+        }
+      });
+    }, {rootMargin:'-120px 0px -65% 0px', threshold:0});
+    sections.forEach(function(s){ obs.observe(s.el); });
+  }
+
+  var toTop = document.getElementById('toTop');
+  if(toTop){
+    var onScroll = function(){
+      if(window.scrollY > 620){ toTop.classList.add('show'); }
+      else{ toTop.classList.remove('show'); }
+    };
+    window.addEventListener('scroll', onScroll, {passive:true});
+    toTop.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior: smoothOK() ? 'smooth' : 'auto'});
+    });
+  }
+  function smoothOK(){
+    return !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  }
+})();
+</script>
+</body>
+      </html>
